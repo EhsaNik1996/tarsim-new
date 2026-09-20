@@ -1,26 +1,40 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-ink: #11142b;
+  --color-paper: #f7f9ff;
+  --color-accent: #6c5ce7;
+  --color-cyan: #32d5d2;
+  --color-muted: #697089;
+  --color-line: #dfe3f3;
+  --color-panel: #ecefff;
+  --color-surface: #ffffff;
+  --font-sans: var(--font-vazirmatn);
+  --animate-rise: rise 800ms cubic-bezier(.2,.8,.2,1) both;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-blur-in: blur-in 700ms cubic-bezier(.2,.8,.2,1) both;
+  --animate-marquee: marquee 18s linear infinite;
+  --animate-drift: drift 10s ease-in-out infinite;
+  --animate-scan: scan 4s ease-in-out infinite;
+  --animate-preview-scroll: preview-scroll 24s ease-in-out infinite;
+  --animate-line-pulse: line-pulse 2.4s ease-in-out infinite;
+  --animate-home-float: home-float 3s ease-in-out infinite;
+  @keyframes rise { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+  @keyframes float { 50% { transform: translateY(-12px); } }
+  @keyframes blur-in { from { opacity: 0; filter: blur(16px); transform: translateY(18px); } to { opacity: 1; filter: blur(0); transform: none; } }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+  @keyframes drift { 50% { transform: translate3d(-40px, 35px, 0) scale(1.12); } }
+  @keyframes scan { 0%, 100% { transform: translateY(0); opacity: 0; } 35%, 65% { opacity: .65; } 50% { transform: translateY(280px); } }
+  @keyframes home-float { 0%, 100% { transform: translateY(0); opacity: .65; } 50% { transform: translateY(-3px); opacity: 1; } }
+  @keyframes line-pulse { 0%, 100% { opacity: .18; transform: scaleX(.35); } 50% { opacity: 1; transform: scaleX(1); } }
+  @keyframes preview-scroll { 0%, 10% { transform: translateY(0); } 85%, 95% { transform: translateY(-78%); } 100% { transform: translateY(0); } }
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { background: radial-gradient(circle at 10% 10%, color-mix(in oklab, var(--color-cyan) 9%, transparent), transparent 28%), radial-gradient(circle at 90% 30%, color-mix(in oklab, var(--color-accent) 9%, transparent), transparent 32%), var(--color-paper); color: var(--color-ink); overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.animate-preview-scroll:hover { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: 0ms !important; }
 }

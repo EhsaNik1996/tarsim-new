@@ -1,0 +1,1 @@
+export function VisualAtmosphere(){return <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden" aria-hidden="true"><i className="absolute left-1/2 top-24 size-96 animate-drift bg-accent/15 blur-3xl rounded-full"/><i className="absolute left-0 top-2/3 size-80 animate-drift bg-cyan/15 blur-3xl rounded-full [animation-delay:-4s]"/></div>;}
