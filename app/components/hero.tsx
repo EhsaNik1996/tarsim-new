@@ -14,7 +14,7 @@ export function HeroSection() {
             استودیوی محصول ترسیم <b className="text-muted">— قم</b>
           </span>
 
-          <h1 className="text-9xl leading-none font-extrabold tracking-tighter mt-7 max-sm:text-5xl">
+          <div className="text-8xl leading-14 md:leading-30 font-extrabold tracking-tighter mt-7 max-sm:text-5xl">
             <span className="inline-block animate-blur-in">پیچیده‌ها را</span>
             <br />
             <span className="inline-block relative z-0 animate-blur-in text-accent [animation-delay:180ms] after:absolute after:left-0 after:top-full after:-z-10 after:w-full after:h-0.5 after:animate-line-pulse after:bg-linear-to-l after:from-transparent after:via-accent after:to-cyan">
@@ -23,7 +23,7 @@ export function HeroSection() {
             <span className="inline-block animate-blur-in [animation-delay:320ms]">
               می‌سازیم.
             </span>
-          </h1>
+          </div>
           <p className="max-w-lg text-lg leading-8 mt-10 max-sm:text-sm">
             محصول و زیرساخت می‌سازیم برای مسئله‌هایی که ارزش حل شدن دارند.
           </p>

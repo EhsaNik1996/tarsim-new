@@ -14,7 +14,7 @@ export function SiteFooter() {
           <Ticker />
         </div>
       </div>
-      <div className="flex relative items-end justify-between mx-auto px-7 md:pt-28 pb-24 max-w-7xl max-sm:flex-col max-sm:items-start max-sm:px-4">
+      <div className="flex relative items-end justify-between mx-auto px-7 md:py-24 max-w-7xl max-sm:flex-col max-sm:items-start max-sm:px-4">
         <div>
           <span
             className="font-mono text-xs text-accent tracking-widest"
@@ -22,14 +22,14 @@ export function SiteFooter() {
           >
             START A CONVERSATION / 2026
           </span>
-          <p className="text-8xl leading-none font-extrabold tracking-tighter mt-8 max-sm:text-4xl">
+          <p className="text-8xl leading-11 md:leading-30 font-extrabold tracking-tighter mt-8 max-sm:text-4xl">
             چیزی برای
             <br />
             <em className="text-accent not-italic">ساختن</em> داری؟
           </p>
         </div>
         <Link
-          className="group flex items-center justify-between w-80 text-lg border border-white/20 bg-white/5 backdrop-blur-md transition hover:bg-accent hover:text-ink px-6 py-5 rounded-full max-sm:w-full max-sm:mt-16"
+          className="group flex items-center justify-between w-80 text-lg border border-white/20 bg-white/5 backdrop-blur-md transition hover:bg-accent hover:text-ink px-6 py-5 rounded-full max-sm:w-full max-sm:my-10"
           href="mailto:hello@tarsim.co"
         >
           <span>با ما حرف بزن</span>

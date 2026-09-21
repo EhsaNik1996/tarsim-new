@@ -4,7 +4,7 @@ export function ApproachSection() {
   return (
     <section className="overflow-hidden bg-ink text-paper py-14">
       <div
-        className="flex -translate-x-1/12 animate-marquee text-9xl leading-none max-sm:text-6xl font-extrabold whitespace-nowrap opacity-10 gap-16"
+        className="flex -translate-x-1/12 animate-marquee text-8xl leading-none max-sm:text-6xl font-extrabold whitespace-nowrap opacity-10 gap-16"
         aria-hidden="true"
       >
         <span>مسئله ← ایده ← محصول ←</span>
