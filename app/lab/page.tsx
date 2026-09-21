@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { NextPage } from "@/components/shared/next-page";
-import { PageIntro } from "@/components/shared/page-intro";
-import { JoinBand } from "./components/join-band";
-import { LabLoop, LabRoles } from "./components/lab-content";
+import { NextPage } from "@/components/shared/next";
+import { PageIntro } from "@/components/shared/intro";
+import { JoinBand } from "./components/join";
+import { LabLoop, LabRoles } from "./components/content";
 export const metadata: Metadata = {
   title: "آزمایشگاه",
   description: "جایی برای ساختن، تجربه کردن و عرضه کردن.",

@@ -1,7 +1,7 @@
-import { ApproachSection } from "./components/approach-section";
-import { ExploreLinks } from "./components/explore-links";
-import { FeaturedProduct } from "./components/featured-product";
-import { HeroSection } from "./components/hero-section";
+import { HeroSection } from "./components/hero";
+import { ExploreLinks } from "./components/explore";
+import { ApproachSection } from "./components/approach";
+import { FeaturedProduct } from "./components/featured";
 
 export default function Home() {
   return (

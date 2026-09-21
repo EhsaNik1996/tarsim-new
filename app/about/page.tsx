@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { NextPage } from "@/components/shared/next-page";
-import { PageIntro } from "@/components/shared/page-intro";
-import { AboutQuote, Principles } from "./components/about-content";
+import { NextPage } from "@/components/shared/next";
+import { PageIntro } from "@/components/shared/intro";
+import { AboutQuote, Principles } from "./components/content";
+
 export const metadata: Metadata = {
   title: "دربارهٔ ما",
   description: "ترسیم؛ یک استودیوی مستقل محصول.",
 };
+
 export default function AboutPage() {
   return (
     <main>

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { ArrowIcon } from "@/components/shared/arrow-icon";
-import { CodeConsole } from "@/components/effects/code-console";
+import { ArrowIcon } from "@/components/shared/arrow";
+import { CodeConsole } from "@/components/effects/console";
 
 export function HeroSection() {
   return (

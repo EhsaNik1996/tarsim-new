@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowUp } from "lucide-react";
-import { ArrowIcon } from "@/components/shared/arrow-icon";
+import { ArrowIcon } from "@/components/shared/arrow";
 export function SiteFooter() {
   return (
     <footer className="relative overflow-hidden bg-ink text-paper">
@@ -14,7 +14,7 @@ export function SiteFooter() {
           <Ticker />
         </div>
       </div>
-      <div className="flex relative items-end justify-between mx-auto px-7 pt-28 pb-24 max-w-7xl max-sm:flex-col max-sm:items-start max-sm:px-4">
+      <div className="flex relative items-end justify-between mx-auto px-7 md:pt-28 pb-24 max-w-7xl max-sm:flex-col max-sm:items-start max-sm:px-4">
         <div>
           <span
             className="font-mono text-xs text-accent tracking-widest"

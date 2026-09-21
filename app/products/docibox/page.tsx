@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
-import { ProductCta } from "./components/product-cta";
-import { ProductJourney } from "./components/product-journey";
-import { NextPage } from "@/components/shared/next-page";
-import { PageIntro } from "@/components/shared/page-intro";
-import { DociBoxStage } from "@/components/shared/docibox-stage";
+import { ProductCta } from "./components/cta";
+import { NextPage } from "@/components/shared/next";
+import { PageIntro } from "@/components/shared/intro";
+import { ProductJourney } from "./components/journey";
+import { DociBoxStage } from "@/components/shared/stage";
 import {
   ProductAudiences,
   ProductManifesto,
-} from "./components/product-content";
+} from "./components/content";
+
 export const metadata: Metadata = {
   title: "داکیباکس",
   description: "پلتفرم یکپارچهٔ کتابخانه‌ها و منابع دیجیتال",
 };
+
 export default function DociBoxPage() {
   return (
     <main>
