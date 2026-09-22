@@ -1,6 +1,20 @@
 import Link from "next/link";
 import { ArrowUp } from "lucide-react";
 import { ArrowIcon } from "@/components/shared/arrow";
+
+function Ticker() {
+  return (
+    <>
+      <span>PRODUCT THINKING</span>
+      <span>SOFTWARE ENGINEERING</span>
+      <span>DIGITAL LIBRARIES</span>
+      <span>REAL PROBLEMS</span>
+      <span>BUILT IN QOM</span>
+      <span>DOCIBOX.IR</span>
+    </>
+  );
+}
+
 export function SiteFooter() {
   return (
     <footer className="relative overflow-hidden bg-ink text-paper">
@@ -47,17 +61,5 @@ export function SiteFooter() {
         </Link>
       </div>
     </footer>
-  );
-}
-function Ticker() {
-  return (
-    <>
-      <span>PRODUCT THINKING</span>
-      <span>SOFTWARE ENGINEERING</span>
-      <span>DIGITAL LIBRARIES</span>
-      <span>REAL PROBLEMS</span>
-      <span>BUILT IN QOM</span>
-      <span>DOCIBOX.IR</span>
-    </>
   );
 }
