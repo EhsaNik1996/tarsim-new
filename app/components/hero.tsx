@@ -11,7 +11,7 @@ export function HeroSection() {
       <div className="flex items-center flex-1 gap-10 max-lg:flex-col max-lg:items-start max-lg:justify-center">
         <div className="flex-1">
           <span>
-            استودیوی محصول ترسیم <b className="text-muted">— قم</b>
+            استودیوی محصول ترسیم
           </span>
 
           <div className="text-8xl leading-14 md:leading-30 font-extrabold tracking-tighter mt-7 max-sm:text-5xl">

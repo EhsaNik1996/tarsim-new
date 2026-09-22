@@ -4,7 +4,7 @@ import { PageIntro } from "@/components/shared/intro";
 import { JoinBand } from "./components/join";
 import { LabLoop, LabRoles } from "./components/content";
 export const metadata: Metadata = {
-  title: "آزمایشگاه",
+  title: "استودیو",
   description: "جایی برای ساختن، تجربه کردن و عرضه کردن.",
 };
 export default function LabPage() {
@@ -15,7 +15,7 @@ export default function LabPage() {
         eyebrow="TARSIM LAB"
         title="فکر می‌کنیم."
         accent={<>می‌سازیم.<br />عرضه می‌کنیم.</>}
-        text="آزمایشگاه ترسیم جایی برای آدم‌هایی است که فقط دنبال تمام کردن تسک نیستند؛ می‌خواهند چیزی بسازند که واقعاً استفاده شود."
+        text="استودیو ترسیم جایی برای آدم‌هایی است که فقط دنبال تمام کردن تسک نیستند؛ می‌خواهند چیزی بسازند که واقعاً استفاده شود."
       />
       <LabLoop />
       <LabRoles />

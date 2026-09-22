@@ -10,7 +10,7 @@ export function JoinBand() {
       <div className="masked-cta-media absolute inset-y-0 left-0 -z-10 w-[68%] max-lg:w-full">
         <Image
           src={labWorkbench}
-          alt="میز تجربه‌سازی و آزمایش نمونه‌های محصول در آزمایشگاه ترسیم"
+          alt="میز تجربه‌سازی و آزمایش نمونه‌های محصول در استودیو ترسیم"
           fill
           sizes="100vw"
           className="object-cover object-center transition duration-1000 hover:scale-105"
