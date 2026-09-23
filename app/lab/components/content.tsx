@@ -1,4 +1,4 @@
-import { CircleHelp, Hammer, Rocket } from "lucide-react";
+﻿import { CircleHelp, Hammer, Rocket } from "lucide-react";
 export function LabLoop() {
   return (
     <section className="flex mx-auto px-7 gap-4 max-w-7xl max-sm:flex-col max-sm:px-4">
@@ -55,12 +55,13 @@ export function LabRoles() {
   );
 }
 const steps = [
-  { label: "QUESTION", text: "سؤال درست را پیدا می‌کنیم.", icon: CircleHelp },
+  { label: "THINK", text: "مسئلهٔ درست را پیدا می‌کنیم.", icon: CircleHelp },
   { label: "MAKE", text: "سریع و دقیق نمونه می‌سازیم.", icon: Hammer },
-  { label: "SHIP", text: "به دست آدم‌های واقعی می‌رسانیم.", icon: Rocket },
+  { label: "EXECUTE", text: "به دست آدم‌های واقعی می‌رسانیم.", icon: Rocket },
 ];
 const roles = [
   { label: "ENGINEERING", text: "Frontend · Backend · Infrastructure" },
   { label: "PRODUCT", text: "Product thinking · UX · Research" },
   { label: "IDEAS", text: "اگر چیزی برای ساختن داری، با ما مطرحش کن." },
 ];
+

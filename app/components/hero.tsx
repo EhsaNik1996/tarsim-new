@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowIcon } from "@/components/shared/arrow";
-import { CodeConsole } from "@/components/effects/console";
+import { HeroPreview } from "./hero-preview";
 
 export function HeroSection() {
   return (
@@ -8,7 +8,7 @@ export function HeroSection() {
       className="flex flex-col relative min-h-[calc(100vh-6rem)] mx-auto px-7 pt-12 pb-9 max-w-7xl max-sm:min-h-[calc(100svh-5rem)] max-sm:px-4 max-sm:pt-10"
       id="top"
     >
-      <div className="flex items-center flex-1 gap-10 max-lg:flex-col max-lg:items-start max-lg:justify-center">
+      <div className="flex items-center flex-1 gap-10 pb-10 max-lg:flex-col max-lg:items-start max-lg:justify-center">
         <div className="flex-1">
           <span>
             استودیوی محصول ترسیم
@@ -28,8 +28,8 @@ export function HeroSection() {
             محصول و زیرساخت می‌سازیم برای مسئله‌هایی که ارزش حل شدن دارند.
           </p>
         </div>
-        <div className="flex w-1/3 justify-end max-lg:w-full max-lg:justify-start">
-          <CodeConsole />
+        <div className="flex w-[38%] shrink-0 justify-end max-lg:w-full max-lg:justify-center">
+          <HeroPreview />
         </div>
       </div>
       <div className="flex items-center justify-between border-t border-line pt-5">

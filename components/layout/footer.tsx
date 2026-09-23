@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { ArrowUp } from "lucide-react";
 import { ArrowIcon } from "@/components/shared/arrow";
@@ -17,6 +20,7 @@ function Ticker() {
 }
 
 export function SiteFooter() {
+  const pathname = usePathname();
   return (
     <footer className="relative overflow-hidden bg-ink text-paper">
       <i className="absolute left-1/2 top-20 size-96 bg-accent/10 blur-3xl rounded-full" />
@@ -51,6 +55,7 @@ export function SiteFooter() {
             <br />
             <em className="text-accent not-italic">ساختن</em> داری؟
           </p>
+          {pathname !== "/contact" && pathname !== "/contact/" && (
           <Link
             className="group mt-10 flex w-fit items-center gap-3 border-b border-white/25 py-2 text-sm text-white/80 transition hover:border-accent hover:text-accent max-sm:mb-10 max-sm:mt-7"
             href="/contact"
@@ -58,6 +63,7 @@ export function SiteFooter() {
             <span>با ما حرف بزن</span>
             <ArrowIcon className="size-4 transition group-hover:-translate-x-1" />
           </Link>
+          )}
         </div>
       </div>
       <div className="flex relative justify-between text-xs text-muted border-t border-white/15 mx-auto px-7 py-6 max-w-7xl max-sm:px-4">

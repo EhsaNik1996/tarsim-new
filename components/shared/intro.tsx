@@ -10,7 +10,7 @@ export function PageIntro({
 }: {
   index: string;
   eyebrow: string;
-  title: string;
+  title: ReactNode;
   accent: ReactNode;
   text: string;
   underlineAccent?: boolean;
