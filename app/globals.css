@@ -41,18 +41,12 @@
   -webkit-mask-image: linear-gradient(to right, #000 0%, #000 42%, rgba(0,0,0,.9) 58%, rgba(0,0,0,.28) 82%, transparent 100%);
   mask-image: linear-gradient(to right, #000 0%, #000 42%, rgba(0,0,0,.9) 58%, rgba(0,0,0,.28) 82%, transparent 100%);
 }
-.masked-about-media {
-  opacity: .78;
-  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 46%, rgba(0,0,0,.82) 65%, rgba(0,0,0,.2) 88%, transparent 100%);
-  mask-image: linear-gradient(to right, #000 0%, #000 46%, rgba(0,0,0,.82) 65%, rgba(0,0,0,.2) 88%, transparent 100%);
-}
 .footer-logo-mask {
   -webkit-mask-image: radial-gradient(circle at center, #000 0%, rgba(0,0,0,.82) 48%, transparent 76%);
   mask-image: radial-gradient(circle at center, #000 0%, rgba(0,0,0,.82) 48%, transparent 76%);
 }
 @media (max-width: 64rem) {
-  .masked-cta-media,
-  .masked-about-media {
+  .masked-cta-media {
     opacity: .42;
     -webkit-mask-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,.72) 48%, rgba(0,0,0,.2) 78%, transparent 100%);
     mask-image: linear-gradient(to bottom, #000 0%, rgba(0,0,0,.72) 48%, rgba(0,0,0,.2) 78%, transparent 100%);

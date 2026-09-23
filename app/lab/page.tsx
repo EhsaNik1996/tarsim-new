@@ -13,14 +13,14 @@ export default function LabPage() {
       <PageIntro
         index="02"
         eyebrow="TARSIM LAB"
-        title="فکر می‌کنیم."
-        accent={<>می‌سازیم.<br />عرضه می‌کنیم.</>}
+        title={<span className="text-cyan">فکر می‌کنیم.</span>}
+        accent={<><span className="text-accent">می‌سازیم.</span><br /><span className="text-green">اجرا می‌کنیم.</span></>}
         text="استودیو ترسیم جایی برای آدم‌هایی است که فقط دنبال تمام کردن تسک نیستند؛ می‌خواهند چیزی بسازند که واقعاً استفاده شود."
       />
       <LabLoop />
       <LabRoles />
       <JoinBand />
-      <NextPage href="/about" label="بعدی" title="دربارهٔ ترسیم" />
+      <NextPage href="/contact" label="در ارتباط باشیم" title="گفت‌وگو با ترسیم" />
     </main>
   );
 }

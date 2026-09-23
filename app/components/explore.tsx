@@ -25,16 +25,16 @@ export function ExploreLinks() {
         ltr
       />
       <ExploreCard
-        href="/about"
+        href="/contact"
         index="04 / TARSIM"
         title={
           <>
-            ترسیم را از
+            از یک گفت‌وگو
             <br />
-            ساخته‌هایمان بشناس.
+            شروع کنیم.
           </>
         }
-        caption="دربارهٔ تیم و شیوهٔ فکر کردن ما"
+        caption="آشنایی با ترسیم و شروع همکاری"
         variant="accent"
       />
     </section>
