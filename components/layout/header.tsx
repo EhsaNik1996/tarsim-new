@@ -1,15 +1,17 @@
 "use client";
-import { useState } from "react";
 import Link from "next/link";
-import { Home, Menu, X } from "lucide-react";
-import { usePathname } from "next/navigation";
-import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { ArrowUpLeft, Home, Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import tarsimLogo from "../../public/assets/tarsim-logo.png";
+
 const navigation = [
+  { href: "/lab", label: "استودیو" },
   { href: "/products/docibox", label: "داکیباکس" },
-  { href: "/lab", label: "آزمایشگاه" },
-  { href: "/about", label: "دربارهٔ ما" },
 ];
+
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -21,10 +23,13 @@ export function SiteHeader() {
           className="flex items-center font-extrabold text-xl gap-3"
           aria-label="ترسیم، صفحه اصلی"
         >
-          <span className="flex items-center justify-center size-9 bg-ink text-paper text-sm rounded-full">
-            تـ
-          </span>
-          <span>ترسیم</span>
+          <Image
+            src={tarsimLogo}
+            alt=""
+            width={44}
+            height={44}
+            className="size-11 object-contain"
+          />
         </Link>
         <nav
           className="flex items-center text-sm gap-8 max-sm:hidden"
@@ -40,12 +45,17 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="max-sm:hidden">
-          <Button asChild variant="outline" size="sm">
-            <Link href="mailto:hello@tarsim.co">
-              <i className="inline-block size-2 bg-green-500 rounded-full" />{" "}
-              تماس با ما
-            </Link>
-          </Button>
+          <Link
+            href="/contact"
+            className="group flex min-h-10 items-center gap-2.5 rounded-full border border-line bg-white/55 px-4 text-sm font-medium text-ink transition duration-300 hover:border-accent hover:bg-white"
+          >
+            <i className="size-2 rounded-full bg-accent transition duration-300 group-hover:scale-125" />
+            <span>تماس با ما</span>
+            <ArrowUpLeft
+              aria-hidden="true"
+              className="size-4 stroke-[1.7] text-muted transition duration-300 group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
+            />
+          </Link>
         </div>
         <button
           type="button"
@@ -81,11 +91,15 @@ export function SiteHeader() {
             />
           ))}
           <Link
-            className="flex items-center justify-center bg-ink text-paper mt-3 px-5 py-4 rounded-2xl"
-            href="mailto:hello@tarsim.co"
+            className="group mt-3 flex items-center justify-between rounded-2xl border border-line bg-white/60 px-5 py-4 text-ink"
+            href="/contact"
             onClick={() => setOpen(false)}
           >
-            تماس با ما
+            <span className="flex items-center gap-3">
+              <i className="size-2 rounded-full bg-accent" />
+              تماس با ما
+            </span>
+            <ArrowUpLeft aria-hidden="true" className="size-5 stroke-[1.7] text-accent" />
           </Link>
         </nav>
       </div>

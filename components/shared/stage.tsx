@@ -1,4 +1,7 @@
 import Image from "next/image";
+import dociboxLogo from "../../public/assets/docibox-logo.png";
+import dociboxFullpage from "../../public/assets/docibox-fullpage.png";
+
 export function DociBoxStage({ compact = false }: { compact?: boolean }) {
   const height = compact ? "h-180 max-sm:h-120" : "h-168 max-sm:h-120";
   return (
@@ -15,7 +18,7 @@ export function DociBoxStage({ compact = false }: { compact?: boolean }) {
       <div className="flex relative z-10 w-4/5 max-w-5xl h-120 overflow-hidden bg-surface border border-white/20 shadow-2xl transition duration-700 -rotate-2 group-hover:scale-105 group-hover:rotate-0 rounded-3xl max-sm:w-11/12 max-sm:h-80">
         <div className="relative flex-1 overflow-hidden">
           <Image
-            src="/docibox-fullpage.png"
+            src={dociboxFullpage}
             alt="محیط داکیباکس؛ کتابخانه‌ات کجاست؟"
             fill
             sizes="(max-width: 640px) 90vw, 70vw"
@@ -24,7 +27,7 @@ export function DociBoxStage({ compact = false }: { compact?: boolean }) {
           <div className="absolute inset-0 bg-linear-to-l from-ink/80 via-ink/20 to-transparent" />
           <div className="absolute left-8 top-8 w-64 bg-white/80 text-ink shadow-xl backdrop-blur-xl p-6 rounded-2xl max-sm:left-4 max-sm:top-4 max-sm:w-48 max-sm:p-4">
             <Image
-              src="/docibox-logo.png"
+              src={dociboxLogo}
               alt="لوگوی داکیباکس"
               width={44}
               height={44}

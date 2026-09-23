@@ -2,13 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import labWorkbench from "../../../public/assets/lab-workbench.png";
+
 export function JoinBand() {
   return (
     <section className="relative isolate min-h-150 overflow-hidden bg-ink text-white py-28">
       <div className="masked-cta-media absolute inset-y-0 left-0 -z-10 w-[68%] max-lg:w-full">
         <Image
-          src="/lab-workbench.png"
-          alt="میز تجربه‌سازی و آزمایش نمونه‌های محصول در آزمایشگاه ترسیم"
+          src={labWorkbench}
+          alt="میز تجربه‌سازی و آزمایش نمونه‌های محصول در استودیو ترسیم"
           fill
           sizes="100vw"
           className="object-cover object-center transition duration-1000 hover:scale-105"

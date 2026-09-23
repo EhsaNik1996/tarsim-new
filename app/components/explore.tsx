@@ -59,7 +59,7 @@ function ExploreCard({
   return (
     <Link
       href={href}
-      className={`group flex flex-1 flex-col justify-between relative h-140 overflow-hidden border transition duration-500 hover:-translate-y-3 hover:shadow-2xl p-10 rounded-3xl max-sm:h-104 ${accent ? "bg-linear-to-br from-accent to-cyan text-white border-white/20" : "bg-white/65 text-ink border-line backdrop-blur-lg hover:border-accent"}`}
+      className={`group flex flex-1 flex-col justify-between relative h-140 overflow-hidden border transition duration-500 hover:-translate-y-3 hover:shadow-2xl p-10 rounded-3xl max-sm:h-104 ${accent ? "bg-linear-to-br from-accent via-green to-cyan text-white border-white/20" : "bg-white/65 text-ink border-line backdrop-blur-lg hover:border-accent"}`}
     >
       <i
         className={`absolute left-2/3 top-2/3 size-72 blur-3xl transition duration-700 group-hover:scale-150 rounded-full ${accent ? "bg-white/20" : "bg-accent/15"}`}
