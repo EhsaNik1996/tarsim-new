@@ -10,14 +10,14 @@ export function ExploreLinks() {
     >
       <ExploreCard
         href="/lab"
-        index="03 / LAB"
+        index="03 / STUDIO"
         title={
           <>
-            WE BUILD.
+            WE THINK
             <br />
-            WE EXPERIMENT.
+            WE BUILD
             <br />
-            WE SHIP.
+            WE EXUTE.
           </>
         }
         caption="برای آدم‌هایی که می‌خواهند چیزی واقعی بسازند"
