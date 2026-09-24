@@ -9,7 +9,7 @@ export function ExploreLinks() {
       className="flex mx-auto px-7 py-28 gap-5 max-w-7xl max-sm:flex-col max-sm:px-4 max-sm:py-20"
     >
       <ExploreCard
-        href="/lab"
+        href="/studio"
         index="03 / STUDIO"
         title={
           <>
