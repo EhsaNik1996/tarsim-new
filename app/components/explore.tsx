@@ -17,7 +17,7 @@ export function ExploreLinks() {
             <br />
             WE BUILD
             <br />
-            WE EXUTE.
+            WE EXECUTE.
           </>
         }
         caption="برای آدم‌هایی که می‌خواهند چیزی واقعی بسازند"

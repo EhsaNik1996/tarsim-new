@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { ArrowIcon } from "@/components/shared/arrow";
 import { HeroPreview } from "./hero-preview";
+import { ArrowIcon } from "@/components/shared/arrow";
 
 export function HeroSection() {
   return (
@@ -10,9 +10,7 @@ export function HeroSection() {
     >
       <div className="flex items-center flex-1 gap-10 pb-10 max-lg:flex-col max-lg:items-start max-lg:justify-center">
         <div className="flex-1">
-          <span>
-            استودیوی محصول ترسیم
-          </span>
+          <span className="hidden md:block">استودیوی محصول ترسیم</span>
 
           <div className="text-8xl leading-14 md:leading-30 font-extrabold tracking-tighter mt-7 max-sm:text-5xl">
             <span className="inline-block animate-blur-in">پیچیده‌ها را</span>
