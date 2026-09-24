@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import tarsimLogo from "../../public/assets/tarsim-logo.png";
 
 const navigation = [
-  { href: "/lab", label: "استودیو" },
+  { href: "/studio", label: "استودیو" },
   { href: "/products/docibox", label: "داکیباکس" },
 ];
 

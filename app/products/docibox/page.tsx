@@ -31,7 +31,7 @@ export default function DociBoxPage() {
       <ProductManifesto />
       <ProductAudiences />
       <ProductCta />
-      <NextPage href="/lab" label="بعدی" title="استودیو ترسیم" />
+      <NextPage href="/studio" label="بعدی" title="استودیو ترسیم" />
     </main>
   );
 }
