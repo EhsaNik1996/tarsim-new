@@ -2,7 +2,10 @@
 
 export function LabLoop() {
   return (
-    <section className="flex mx-auto px-7 gap-4 max-w-7xl max-sm:flex-col max-sm:px-4" dir="ltr">
+    <section
+      className="flex mx-auto px-7 gap-4 max-w-7xl max-sm:flex-col max-sm:px-4"
+      dir="ltr"
+    >
       {steps.map((step, index) => {
         const Icon = step.icon;
         const active = index === 1;
@@ -15,7 +18,10 @@ export function LabLoop() {
             <i
               className={`absolute left-2/3 top-2/3 size-48 blur-3xl transition duration-500 group-hover:scale-150 rounded-full ${active ? "bg-white/20" : "bg-accent/15"}`}
             />
-            <div className="flex relative items-center justify-between" dir="ltr">
+            <div
+              className="flex relative items-center justify-between"
+              dir="ltr"
+            >
               <span className="font-sans text-xs opacity-60" dir="ltr">
                 0{index + 1}
               </span>
@@ -59,9 +65,9 @@ export function LabRoles() {
   );
 }
 const steps = [
-  { label: "EXECUTE", text: "به دست آدم‌های واقعی می‌رسانیم.", icon: Rocket },
-  { label: "MAKE", text: "سریع و دقیق نمونه می‌سازیم.", icon: Hammer },
   { label: "THINK", text: "مسئلهٔ درست را پیدا می‌کنیم.", icon: CircleHelp },
+  { label: "MAKE", text: "سریع و دقیق نمونه می‌سازیم.", icon: Hammer },
+  { label: "EXECUTE", text: "به دست آدم‌های واقعی می‌رسانیم.", icon: Rocket },
 ];
 const roles = [
   { label: "ENGINEERING", text: "Frontend · Backend · Infrastructure" },
