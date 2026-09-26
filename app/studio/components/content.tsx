@@ -1,4 +1,5 @@
-﻿import { CircleHelp, Hammer, Rocket } from "lucide-react";
+import { CircleHelp, Hammer, Rocket } from "lucide-react";
+import { BlurReveal } from "@/components/effects/reveal";
 
 export function LabLoop() {
   return (
@@ -40,15 +41,15 @@ export function LabLoop() {
 export function LabRoles() {
   return (
     <section className="flex mx-auto px-7 py-32 gap-20 max-w-7xl max-sm:flex-col max-sm:px-4 max-sm:py-20">
-      <div className="w-1/2 max-sm:w-full">
+      <BlurReveal className="w-1/2 max-sm:w-full">
         <span className="text-xs text-muted">فضایی برای</span>
         <h2 className="text-8xl leading-tight font-extrabold mt-12 max-sm:text-4xl">
           آدم‌های
           <br />
           کنجکاو.
         </h2>
-      </div>
-      <div className="w-1/2 max-sm:w-full">
+      </BlurReveal>
+      <BlurReveal className="w-1/2 max-sm:w-full" delay={120}>
         {roles.map((role) => (
           <article
             className="group border-t border-line transition hover:border-accent py-8"
@@ -60,7 +61,7 @@ export function LabRoles() {
             <p className="text-muted mt-4">{role.text}</p>
           </article>
         ))}
-      </div>
+      </BlurReveal>
     </section>
   );
 }
@@ -74,3 +75,7 @@ const roles = [
   { label: "PRODUCT", text: "Product thinking · UX · Research" },
   { label: "IDEAS", text: "اگر چیزی برای ساختن داری، با ما مطرحش کن." },
 ];
+
+
+
+

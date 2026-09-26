@@ -1,7 +1,8 @@
-﻿"use client";
+"use client";
 
 import { type FormEvent } from "react";
 import { ArrowUpLeft, Mail, MessageCircle, Send } from "lucide-react";
+import { BlurReveal } from "@/components/effects/reveal";
 
 const fieldClass = "w-full min-w-0 rounded-xl border border-line bg-paper/70 px-4 py-3.5 text-sm leading-6 outline-none transition placeholder:text-muted/60 hover:border-ink/25 focus:border-accent focus:ring-4 focus:ring-accent/10";
 
@@ -23,7 +24,7 @@ export default function ContactPage() {
         تماس با ترسیم
       </div>
       <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
-        <div className="lg:py-4">
+        <BlurReveal className="lg:py-4">
           <h1 className="text-6xl font-extrabold leading-tight tracking-tighter max-sm:text-4xl xl:text-7xl">
             شروعش،
             <br />
@@ -55,9 +56,10 @@ export default function ContactPage() {
               ))}
             </div>
           </div>
-        </div>
+        </BlurReveal>
 
-        <form onSubmit={submit} aria-labelledby="contact-form-title" aria-describedby="contact-form-note" className="rounded-[2rem] border border-line bg-white/80 p-7 shadow-[0_20px_70px_-40px_rgba(45,47,50,0.2)] sm:p-9">
+        <BlurReveal delay={180}>
+        <form onSubmit={submit} aria-labelledby="contact-form-title" aria-describedby="contact-form-note" className="border border-line bg-white/80 p-7 shadow-[0_20px_70px_-40px_rgba(45,47,50,0.2)] sm:p-9 rounded-4xl">
           <div className="mb-8 flex items-start justify-between gap-4">
             <div>
               <h2 id="contact-form-title" className="text-xl font-bold">از چیزی که در ذهنته بگو.</h2>
@@ -91,7 +93,13 @@ export default function ContactPage() {
             <p id="contact-form-note" className="mt-4 text-xs leading-6 text-muted">با زدن این دکمه، برنامهٔ ایمیل شما باز می‌شود تا پیام را ارسال کنید.</p>
           </div>
         </form>
+        </BlurReveal>
       </div>
     </main>
   );
 }
+
+
+
+
+

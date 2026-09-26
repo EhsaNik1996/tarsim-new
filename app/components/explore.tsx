@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { ArrowIcon } from "@/components/shared/arrow";
+import { BlurReveal } from "@/components/effects/reveal";
 
 export function ExploreLinks() {
   return (
@@ -64,15 +65,10 @@ function ExploreCard({
       <i
         className={`absolute left-2/3 top-2/3 size-72 blur-3xl transition duration-700 group-hover:scale-150 rounded-full ${accent ? "bg-white/20" : "bg-accent/15"}`}
       />
-      <span className="relative font-sans text-xs tracking-widest">
-        {index}
-      </span>
-      <div
-        dir={ltr ? "ltr" : "rtl"}
-        className="flex relative min-w-0 items-end justify-between gap-8 max-sm:gap-4"
-      >
+      <BlurReveal className="relative font-sans text-xs tracking-widest">{index}</BlurReveal>
+      <BlurReveal className="flex relative min-w-0 items-end justify-between gap-8 max-sm:gap-4" delay={100}>
         <p
-          dir={ltr ? "ltr" : "rtl"}
+         
           className={`min-w-0 text-6xl leading-tight max-sm:text-3xl font-bold tracking-tighter transition duration-500 group-hover:-translate-y-2 ${ltr ? "font-sans text-left" : "text-right"}`}
         >
           {title}
@@ -82,12 +78,11 @@ function ExploreCard({
         >
           <ArrowIcon className="size-5 shrink-0" />
         </span>
-      </div>
-      <small
-        className={`relative text-right border-t pt-5 ${accent ? "border-white/25" : "border-ink/20"}`}
-      >
+      </BlurReveal>
+      <BlurReveal delay={180} className={`relative text-right border-t pt-5 ${accent ? "border-white/25" : "border-ink/20"}`}>
         {caption}
-      </small>
+      </BlurReveal>
     </Link>
   );
 }
+

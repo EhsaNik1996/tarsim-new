@@ -22,7 +22,7 @@ export function JoinBand() {
         <p className="font-mono text-xs text-cyan tracking-widest">
           TARSIM / PEOPLE
         </p>
-        <h2 className="max-w-3xl text-8xl leading-none font-extrabold tracking-tighter my-16 max-sm:text-4xl">
+        <h2 className="max-w-3xl text-8xl leading-11 md:leading-30 font-extrabold tracking-tighter my-16 max-sm:text-4xl">
           ساختن برایت
           <br />
           فقط یک شغل نیست.
