@@ -7,7 +7,7 @@ export function FeaturedProduct() {
   return (
     <section
       id="product"
-      className="mx-auto px-7 py-36 max-w-7xl max-sm:px-4 max-sm:py-24"
+      className="mx-auto px-7 max-w-7xl max-sm:px-4 md:py-24"
     >
       <BlurReveal>
         <div className="text-xs font-bold tracking-wide">

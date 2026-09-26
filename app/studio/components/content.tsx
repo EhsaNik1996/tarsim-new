@@ -11,7 +11,7 @@ export function LabLoop() {
         const active = index === 1;
         return (
           <article
-            className={`group flex flex-1 flex-col relative h-96 overflow-hidden border transition duration-500 hover:-translate-y-3 hover:shadow-2xl p-8 rounded-3xl max-sm:h-64 ${active ? "bg-linear-to-br from-accent via-green to-cyan text-white border-white/20" : "bg-white/65 border-line backdrop-blur-lg hover:border-accent"}`}
+            className={`group flex flex-1 flex-col relative h-96 cursor-default overflow-hidden border transition duration-500 hover:-translate-y-3 hover:shadow-2xl p-8 rounded-3xl max-sm:h-64 ${active ? "bg-linear-to-br from-accent via-green to-cyan text-white border-white/20" : "bg-white/65 border-line backdrop-blur-lg hover:border-accent"}`}
             key={step.label}
             dir="rtl"
           >

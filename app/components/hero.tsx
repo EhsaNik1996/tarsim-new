@@ -30,7 +30,7 @@ export function HeroSection() {
           <HeroPreview />
         </div>
       </div>
-      <div className="flex items-center justify-between border-t border-line pt-5">
+      <div className="hidden md:flex items-center justify-between border-t border-line pt-5">
         <span className="font-mono text-xs text-muted" dir="ltr">
           SCROLL TO EXPLORE
         </span>

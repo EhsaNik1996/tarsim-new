@@ -17,7 +17,7 @@ export function PageIntro({
 }) {
   return (
     <section
-      className="flex items-center min-h-172 mx-auto px-7 py-20 max-w-7xl max-sm:block max-sm:min-h-150 max-sm:px-4 max-sm:py-14"
+      className="flex items-center mx-auto px-7 max-w-7xl max-sm:block min-h-125 md:min-h-150 max-sm:px-4 py-14"
       id="top"
     >
       <BlurReveal className="flex self-start items-center w-1/3 text-xs font-bold tracking-wide gap-3 max-sm:w-full">
