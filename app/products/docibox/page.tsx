@@ -4,10 +4,7 @@ import { NextPage } from "@/components/shared/next";
 import { PageIntro } from "@/components/shared/intro";
 import { ProductJourney } from "./components/journey";
 import { DociBoxStage } from "@/components/shared/stage";
-import {
-  ProductAudiences,
-  ProductManifesto,
-} from "./components/content";
+import { ProductAudiences, ProductManifesto } from "./components/content";
 
 export const metadata: Metadata = {
   title: "داکیباکس",
@@ -24,7 +21,7 @@ export default function DociBoxPage() {
         accent="یک تجربهٔ ساده."
         text="داکیباکس پلتفرمی یکپارچه برای کتابخانه‌ها، ناشران و آدم‌هایی است که می‌خواهند دانش همیشه در دسترس باشد."
       />
-      <section className="mx-auto px-7 pb-36 max-w-7xl max-sm:px-4 max-sm:pb-20">
+      <section className="mx-auto px-7 max-w-7xl max-sm:px-4 md:pb-20">
         <DociBoxStage compact />
       </section>
       <ProductJourney />

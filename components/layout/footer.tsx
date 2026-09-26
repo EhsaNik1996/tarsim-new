@@ -67,7 +67,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="flex relative justify-between text-xs text-muted border-t border-white/15 mx-auto px-7 py-6 max-w-7xl max-sm:px-4">
-        <span>© ۱۴۰۵ ترسیم</span>
+        <span>© 1405 ترسیم</span>
         <Link className="flex items-center text-white gap-2" href="#top">
           بازگشت به بالا <ArrowUp className="size-4 stroke-[1.7]" />
         </Link>

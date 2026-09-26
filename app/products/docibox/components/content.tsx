@@ -1,4 +1,5 @@
 import { BookOpenText, LibraryBig, UsersRound } from "lucide-react";
+import { BlurReveal } from "@/components/effects/reveal";
 
 const audiences = [
   {
@@ -21,13 +22,15 @@ const audiences = [
 export function ProductManifesto() {
   return (
     <section className="flex mx-auto px-7 pt-12 pb-36 gap-20 max-w-7xl max-sm:flex-col max-sm:px-4 max-sm:pb-24 max-sm:gap-8">
-      <p className="w-1/3 text-muted max-sm:w-full">
+      <BlurReveal className="w-1/3 text-muted max-sm:w-full">
         داکیباکس از یک ایده شروع شد:
-      </p>
-      <h2 className="w-2/3 text-7xl leading-tight font-extrabold tracking-tighter max-sm:w-full max-sm:text-4xl">
+      </BlurReveal>
+      <BlurReveal delay={120} className="w-2/3 max-sm:w-full">
+      <h2 className="text-7xl leading-tight font-extrabold tracking-tighter max-sm:text-4xl">
         منابع پراکنده، کتابخانه‌ها، ناشران و کاربران را در یک فضای مشترک به هم
         نزدیک کنیم.
       </h2>
+      </BlurReveal>
     </section>
   );
 }
@@ -60,3 +63,6 @@ export function ProductAudiences() {
     </section>
   );
 }
+
+
+
