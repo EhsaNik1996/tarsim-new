@@ -152,6 +152,29 @@ body {
     }
   }
 }
+
+/* The full-page preview has a different visible travel distance on phones:
+   keep its lower edge inside the browser frame instead of exposing the white
+   page background. */
+@media (max-width: 640px) {
+  @keyframes preview-scroll-mobile {
+    0%,
+    10% {
+      transform: translateY(0);
+    }
+    85%,
+    95% {
+      transform: translateY(-62%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .animate-preview-scroll {
+    animation-name: preview-scroll-mobile;
+  }
+}
 .hero-preview-mark {
   transform-origin: center;
   animation: hero-mark 1.8s ease-in-out infinite;

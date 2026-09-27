@@ -47,9 +47,9 @@ export function SiteHeader() {
         <div className="max-sm:hidden">
           <Link
             href="/contact"
-            className="group flex min-h-10 items-center gap-2.5 rounded-full border border-line bg-white/55 px-4 text-sm font-medium text-ink transition duration-300 hover:border-accent hover:bg-white"
+            className="group flex min-h-10 items-center gap-2.5 border border-line bg-white/55 px-4 text-sm font-medium text-ink transition duration-300 hover:border-accent hover:bg-white rounded-full"
           >
-            <i className="size-2 rounded-full bg-accent transition duration-300 group-hover:scale-125" />
+            <i className="size-2 animate-pulse bg-accent transition duration-300 group-hover:scale-125 rounded-full" />
             <span>تماس با ما</span>
             <ArrowUpLeft
               aria-hidden="true"
