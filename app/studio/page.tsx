@@ -5,8 +5,9 @@ import { PageIntro } from "@/components/shared/intro";
 import { LabLoop, LabRoles } from "./components/content";
 
 export const metadata: Metadata = {
-  title: "استودیو",
-  description: "جایی برای ساختن، تجربه کردن و عرضه کردن.",
+  title: "استودیو ترسیم",
+  description: "استودیو ترسیم جایی برای فکر کردن، ساختن و اجرای محصولات دیجیتال کاربردی است.",
+  alternates: { canonical: "/studio" },
 };
 
 export default function LabPage() {
