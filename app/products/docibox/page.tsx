@@ -8,7 +8,8 @@ import { ProductAudiences, ProductManifesto } from "./components/content";
 
 export const metadata: Metadata = {
   title: "داکیباکس",
-  description: "پلتفرم یکپارچهٔ کتابخانه‌ها و منابع دیجیتال",
+  description: "داکیباکس پلتفرم یکپارچهٔ کتابخانه‌ها و منابع دیجیتال برای دسترسی ساده‌تر به دانش است.",
+  alternates: { canonical: "/products/docibox" },
 };
 
 export default function DociBoxPage() {
