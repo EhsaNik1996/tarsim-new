@@ -3,6 +3,7 @@ import { JoinBand } from "./components/join";
 import { NextPage } from "@/components/shared/next";
 import { PageIntro } from "@/components/shared/intro";
 import { LabLoop, LabRoles } from "./components/content";
+import TechStackSection from "./components/tech-stack";
 
 export const metadata: Metadata = {
   title: "استودیو ترسیم",
@@ -35,6 +36,9 @@ export default function LabPage() {
         text="استودیو ترسیم جایی برای آدم‌هایی است که فقط دنبال تمام کردن تسک نیستند؛ می‌خواهند چیزی بسازند که واقعاً استفاده شود."
       />
       <LabLoop />
+      <div className="mt-20 md:mt-32">
+        <TechStackSection />
+      </div>
       <LabRoles />
       <JoinBand />
       <NextPage
