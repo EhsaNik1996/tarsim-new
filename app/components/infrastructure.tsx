@@ -61,7 +61,7 @@ export function InfrastructureSection() {
     <section
       id="infrastructure"
       aria-labelledby="infrastructure-title"
-      className="bg-surface pb-16 pt-4 text-ink md:pb-24 md:pt-8"
+      className="pb-16 pt-4 text-ink md:pb-24 md:pt-8"
     >
       <div className="mx-auto w-[92%] max-w-370 border border-line bg-linear-to-bl from-panel/65 via-paper to-surface p-6 md:p-9 lg:p-12 rounded-4xl">
         <div className="grid items-center gap-10 lg:grid-cols-[0.85fr_1.65fr] lg:gap-12 xl:gap-16">

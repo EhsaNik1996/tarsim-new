@@ -20,36 +20,38 @@ export function PageIntro({
   if (sideVisual) {
     return (
       <section
-        className="relative mx-auto grid min-h-125 max-w-7xl grid-cols-1 items-center gap-10 px-7 py-14 md:min-h-150 md:grid-cols-[1.05fr_0.95fr] md:gap-8 max-sm:px-4"
+        className="relative mx-auto min-h-125 max-w-7xl items-center gap-10 px-7 py-14 md:min-h-150 md:gap-8 max-sm:px-4"
         id="top"
       >
-        <BlurReveal className="absolute left-7 top-8 flex items-center gap-3 text-xs font-bold tracking-wide max-sm:left-4 max-sm:top-6">
+        <BlurReveal className="transition duration-1000 ease-out will-change-transform translate-y-0 opacity-100 blur-none flex self-start items-center w-1/3 text-xs font-bold tracking-wide gap-3 max-sm:w-full">
           <span className="text-accent font-mono">{index}</span>
           <span>{eyebrow}</span>
         </BlurReveal>
-        <div className="pt-10 md:pt-12">
-          <BlurReveal>
-            <h1 className="mt-8 text-6xl leading-tight font-extrabold tracking-tighter md:text-7xl max-sm:mt-5 max-sm:text-4xl">
-              {title}
-              <br />
-              <em
-                className={
-                  underlineAccent
-                    ? "inline-block relative z-0 text-accent not-italic after:absolute after:left-0 after:top-full after:-z-10 after:w-full after:h-0.5 after:animate-line-pulse after:bg-linear-to-l after:from-transparent after:via-accent after:to-gold"
-                    : "text-accent not-italic"
-                }
-              >
-                {accent}
-              </em>
-            </h1>
-          </BlurReveal>
-          <BlurReveal delay={140}>
-            <p className="mt-9 max-w-2xl text-base leading-9 md:text-lg">
-              {text}
-            </p>
-          </BlurReveal>
+        <div className="flex flex-col md:flex-row w-full gap-6 max-sm:gap-4">
+          <div className="basis-1/2 pt-10 md:pt-12">
+            <BlurReveal>
+              <h1 className="mt-8 text-6xl leading-tight font-extrabold tracking-tighter md:text-8xl max-sm:mt-1 max-sm:text-5xl">
+                {title}
+                <br />
+                <em
+                  className={
+                    underlineAccent
+                      ? "inline-block relative z-0 text-accent not-italic after:absolute after:left-0 after:top-full after:-z-10 after:w-full after:h-0.5 after:animate-line-pulse after:bg-linear-to-l after:from-transparent after:via-accent after:to-gold"
+                      : "text-accent not-italic"
+                  }
+                >
+                  {accent}
+                </em>
+              </h1>
+            </BlurReveal>
+            <BlurReveal delay={140}>
+              <p className="mt-9 max-w-2xl text-base leading-9 md:text-lg">
+                {text}
+              </p>
+            </BlurReveal>
+          </div>
+          <div className="basis-1/2">{sideVisual}</div>
         </div>
-        <div className="w-full">{sideVisual}</div>
       </section>
     );
   }
@@ -65,7 +67,7 @@ export function PageIntro({
       </BlurReveal>
       <div className="w-2/3 max-sm:w-full">
         <BlurReveal>
-          <h1 className="text-8xl leading-tight font-extrabold tracking-tighter mt-16 max-sm:text-4xl max-sm:mt-24">
+          <h1 className="text-8xl leading-17 md:leading-33 font-extrabold tracking-tighter mt-16 max-sm:text-5xl max-sm:mt-20">
             {title}
             <br />
             <em

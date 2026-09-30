@@ -20,24 +20,24 @@ export default function ContactPage() {
   return (
     <main
       id="top"
-      className="mx-auto max-w-7xl px-7 py-20 max-sm:px-4 max-sm:py-12"
+      className="mx-auto max-w-7xl px-7 py-20 max-sm:px-4 max-sm:py-14"
     >
-      <div className="mb-12 flex items-center gap-3 text-xs font-medium sm:mb-16">
+      <div className="transition duration-1000 ease-out will-change-transform translate-y-0 opacity-100 blur-none flex self-start items-center w-1/3 text-xs font-bold tracking-wide gap-3 max-sm:w-full">
         <span aria-hidden="true" className="size-2 rounded-full bg-accent" />
         تماس با ترسیم
       </div>
-      <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
+      <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20 pt-10 md:pt-12">
         <BlurReveal className="lg:py-4">
-          <h1 className="text-6xl font-extrabold leading-tight tracking-tighter max-sm:text-4xl xl:text-7xl">
+          <h1 className="text-8xl leading-17 md:leading-32 font-extrabold tracking-tighter mt-16 max-sm:text-5xl max-sm:mt-5">
             شروعش،
             <br />
-            <span className="text-accent">یک گفت‌وگوست.</span>
+            <span className="text-accent text-nowrap">یک گفت‌وگوست.</span>
           </h1>
           <p className="mt-7 max-w-md text-base leading-8 text-muted">
             ما در ترسیم محصول و زیرساخت می‌سازیم؛ از یک نیاز واقعی تا تجربه‌ای
             ساده و کاربردی.
           </p>
-          <p className="mt-4 max-w-md text-base leading-8 text-muted">
+          <p className="max-w-md text-base leading-8 text-muted">
             ایده‌ای برای ساختن داری یا مسئله‌ای که می‌خواهی ساده‌ترش کنی؟ برای
             ما بنویس؛ از همین‌جا شروع کنیم.
           </p>

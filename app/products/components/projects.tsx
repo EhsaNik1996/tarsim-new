@@ -47,7 +47,7 @@ export function OtherProducts() {
     <section
       id="projects"
       aria-labelledby="projects-title"
-      className="overflow-hidden bg-surface py-16 text-ink md:py-24"
+      className="overflow-hidden py-16 text-ink md:py-24"
       dir="rtl"
     >
       <div className="mx-auto w-[92%] max-w-370 max-sm:w-[92%]">
@@ -98,126 +98,126 @@ export function OtherProducts() {
           </div>
         </div>
         <div className="overflow-x-clip py-1">
-        <Swiper
-          id="products-track"
-          dir="rtl"
-          className="overflow-visible! px-1 pb-8 pt-8"
-          modules={[A11y, Keyboard]}
-          keyboard={{ enabled: true, onlyInViewport: true }}
-          slidesPerView={1}
-          slidesPerGroup={1}
-          spaceBetween={24}
-          speed={280}
-          breakpoints={{ 768: { slidesPerView: 3 } }}
-          onSwiper={(swiper) => {
-            swiperRef.current = swiper;
-          }}
-          onSlideChange={(swiper) => {
-            const end =
-              swiper.activeIndex + Number(swiper.params.slidesPerView) - 1;
-            setActive((current) =>
-              Math.max(swiper.activeIndex, Math.min(current, end)),
-            );
-          }}
-          aria-label="??????? ???? ?????"
-        >
-          {projects.map((item, index) => (
-            <SwiperSlide key={item.id} className="h-auto box-border px-px">
-              <article
-                className="group relative flex min-h-102 min-w-0 flex-col border p-6 transition duration-500 hover:-translate-y-0.5 focus-within:-translate-y-0.5 max-md:min-h-95 max-md:p-6 rounded-3xl max-md:rounded-3xl"
-                style={
-                  {
-                    "--project-color": colors[index % colors.length],
-                    borderColor:
-                      active === index
-                        ? colors[index % colors.length]
-                        : "var(--color-line)",
-                    background: `radial-gradient(ellipse at top left, color-mix(in srgb, ${colors[index % colors.length]} 1%, var(--color-surface)), transparent 75%), linear-gradient(210deg, color-mix(in srgb, ${colors[index % colors.length]} 7%, var(--color-surface)), var(--color-surface) 80%)`,
-                    boxShadow:
-                      active === index
-                        ? `0 18px 38px -18px color-mix(in srgb, ${colors[index % colors.length]} 58%, transparent)`
-                        : "0 6px 14px rgb(45 47 50 / 5%)",
-                    transform:
-                      active === index ? "translateY(-4px)" : undefined,
-                  } as CSSProperties
-                }
-              >
-                <div className="flex items-center justify-between gap-4">
-                  <span className="inline-flex max-w-[78%] items-center truncate rounded-full border border-line px-3 py-1.5 text-[11px] leading-none font-bold text-muted">
-                    {item.subtitle}
-                  </span>
-                  <span className="inline-flex shrink-0 items-center rounded-full border border-line px-3 py-1.5 text-[11px] leading-none font-bold text-muted">
-                    {item.privacy}
-                  </span>
-                </div>
-                <div className="mt-9 flex items-center justify-between gap-3">
-                  <h3 className="min-w-0 text-2xl font-black leading-relaxed text-ink">
-                    {item.title}
-                  </h3>
-                  <span
-                    className="block shrink-0 text-[72px] leading-none tracking-[-3px] text-transparent md:hidden rounded-full"
-                    style={{
-                      WebkitTextStroke: `1px color-mix(in srgb, ${colors[index % colors.length]} 28%, transparent)`,
-                    }}
-                    aria-hidden="true"
+          <Swiper
+            id="products-track"
+            dir="rtl"
+            className="overflow-visible! px-1 pb-8 pt-8"
+            modules={[A11y, Keyboard]}
+            keyboard={{ enabled: true, onlyInViewport: true }}
+            slidesPerView={1}
+            slidesPerGroup={1}
+            spaceBetween={24}
+            speed={280}
+            breakpoints={{ 768: { slidesPerView: 3 } }}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+            onSlideChange={(swiper) => {
+              const end =
+                swiper.activeIndex + Number(swiper.params.slidesPerView) - 1;
+              setActive((current) =>
+                Math.max(swiper.activeIndex, Math.min(current, end)),
+              );
+            }}
+            aria-label="??????? ???? ?????"
+          >
+            {projects.map((item, index) => (
+              <SwiperSlide key={item.id} className="h-auto box-border px-px">
+                <article
+                  className="group relative flex min-h-102 min-w-0 flex-col border p-6 transition duration-500 hover:-translate-y-0.5 focus-within:-translate-y-0.5 max-md:min-h-95 max-md:p-6 rounded-3xl max-md:rounded-3xl"
+                  style={
+                    {
+                      "--project-color": colors[index % colors.length],
+                      borderColor:
+                        active === index
+                          ? colors[index % colors.length]
+                          : "var(--color-line)",
+                      background: `radial-gradient(ellipse at top left, color-mix(in srgb, ${colors[index % colors.length]} 1%, var(--color-surface)), transparent 75%), linear-gradient(210deg, color-mix(in srgb, ${colors[index % colors.length]} 7%, var(--color-surface)), var(--color-surface) 80%)`,
+                      boxShadow:
+                        active === index
+                          ? `0 18px 38px -18px color-mix(in srgb, ${colors[index % colors.length]} 58%, transparent)`
+                          : "0 6px 14px rgb(45 47 50 / 5%)",
+                      transform:
+                        active === index ? "translateY(-4px)" : undefined,
+                    } as CSSProperties
+                  }
+                >
+                  <div className="flex items-center justify-between gap-4">
+                    <span className="inline-flex max-w-[78%] items-center truncate rounded-full border border-line px-3 py-1.5 text-[11px] leading-none font-bold text-muted">
+                      {item.subtitle}
+                    </span>
+                    <span className="inline-flex shrink-0 items-center rounded-full border border-line px-3 py-1.5 text-[11px] leading-none font-bold text-muted">
+                      {item.privacy}
+                    </span>
+                  </div>
+                  <div className="mt-9 flex items-center justify-between gap-3">
+                    <h3 className="min-w-0 text-2xl font-black leading-relaxed text-ink">
+                      {item.title}
+                    </h3>
+                    <span
+                      className="block shrink-0 text-[72px] leading-none tracking-[-3px] text-transparent md:hidden rounded-full"
+                      style={{
+                        WebkitTextStroke: `1px color-mix(in srgb, ${colors[index % colors.length]} 28%, transparent)`,
+                      }}
+                      aria-hidden="true"
+                      dir="ltr"
+                    >
+                      {number(index + 1)}
+                    </span>
+                  </div>
+                  <p className="mb-5 mt-2 text-sm font-medium leading-7 text-muted">
+                    {item.desc}
+                  </p>
+                  <div
+                    className="mt-auto flex items-end justify-between gap-3"
                     dir="ltr"
                   >
-                    {number(index + 1)}
-                  </span>
-                </div>
-                <p className="mb-5 mt-2 text-sm font-medium leading-7 text-muted">
-                  {item.desc}
-                </p>
-                <div
-                  className="mt-auto flex items-end justify-between gap-3"
-                  dir="ltr"
-                >
-                  <div className="min-w-0 flex-1">
-                    <div className="mb-4 flex flex-wrap gap-1">
-                      {item.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="border border-line px-3 py-1.5 text-xs text-muted rounded-full"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                    <div className="min-w-0 flex-1">
+                      <div className="mb-4 flex flex-wrap gap-1">
+                        {item.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="border border-line px-3 py-1.5 text-xs text-muted rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <button
+                        type="button"
+                        aria-haspopup="dialog"
+                        aria-label={`دربارهٔ ${item.title}`}
+                        onClick={() => {
+                          setSelected(index);
+                          setDialogOpen(true);
+                        }}
+                        className="flex items-center gap-1 text-xs font-bold outline-offset-4 after:absolute after:inset-0 after:rounded-3xl focus-visible:outline-2 focus-visible:outline-current"
+                      >
+                        <span>مشاهده جزئیات</span>
+                        <ArrowUpLeft
+                          aria-hidden="true"
+                          className="size-3 -rotate-90"
+                        />
+                      </button>
                     </div>
-                    <button
-                      type="button"
-                      aria-haspopup="dialog"
-                      aria-label={`دربارهٔ ${item.title}`}
-                      onClick={() => {
-                        setSelected(index);
-                        setDialogOpen(true);
+                    <span
+                      className="hidden shrink-0 text-transparent md:block"
+                      style={{
+                        WebkitTextStroke: `1px color-mix(in srgb, ${colors[index % colors.length]} 28%, transparent)`,
+                        fontSize: "clamp(88px, 10vw, 152px)",
+                        lineHeight: 0.8,
+                        letterSpacing: "-6px",
+                        fontWeight: 800,
                       }}
-                      className="flex items-center gap-1 text-xs font-bold outline-offset-4 after:absolute after:inset-0 after:rounded-3xl focus-visible:outline-2 focus-visible:outline-current"
+                      aria-hidden="true"
                     >
-                      <span>مشاهده جزئیات</span>
-                      <ArrowUpLeft
-                        aria-hidden="true"
-                        className="size-3 -rotate-90"
-                      />
-                    </button>
+                      {number(index + 1)}
+                    </span>
                   </div>
-                  <span
-                    className="hidden shrink-0 text-transparent md:block"
-                    style={{
-                      WebkitTextStroke: `1px color-mix(in srgb, ${colors[index % colors.length]} 28%, transparent)`,
-                      fontSize: "clamp(88px, 10vw, 152px)",
-                      lineHeight: 0.8,
-                      letterSpacing: "-6px",
-                      fontWeight: 800,
-                    }}
-                    aria-hidden="true"
-                  >
-                    {number(index + 1)}
-                  </span>
-                </div>
-              </article>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+                </article>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
         <div
           className="mt-6 flex justify-center gap-1"
