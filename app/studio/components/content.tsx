@@ -4,7 +4,7 @@ import { BlurReveal } from "@/components/effects/reveal";
 export function LabLoop() {
   return (
     <section
-      className="flex mx-auto px-7 gap-4 max-w-7xl max-sm:flex-col max-sm:px-4"
+      className="flex mx-auto px-7 gap-4 max-w-7xl max-sm:flex-col pt-12 md:pt-32 max-sm:px-4"
       dir="ltr"
     >
       {steps.map((step, index) => {

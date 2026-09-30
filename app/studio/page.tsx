@@ -17,7 +17,7 @@ export default function LabPage() {
     <main>
       <PageIntro
         index="02"
-        eyebrow="TARSIM STUDIO"
+        eyebrow="استودیو ترسیم"
         title={
           <span className="inline-block bg-[linear-gradient(105deg,var(--color-accent)_0%,var(--color-accent)_35%,color-mix(in_srgb,var(--color-accent)_35%,white)_50%,var(--color-accent)_65%,var(--color-accent)_100%)] bg-size-[260%_100%] bg-position-[0_0] bg-clip-text text-transparent [-webkit-background-clip:text] animate-[studio-word-wave_8s_ease-in-out_infinite]">
             فکر می‌کنیم.
