@@ -17,9 +17,9 @@ export function ProductCta() {
         />
       </div>
       <div className="absolute inset-0 -z-10 bg-linear-to-l from-ink via-ink/90 via-48% to-accent/15" />
-      <i className="absolute left-1/4 top-1/3 -z-10 size-80 bg-cyan/20 blur-3xl rounded-full" />
+      <i className="absolute left-1/4 top-1/3 -z-10 size-80 bg-gold/18 blur-3xl rounded-full" />
       <div className="relative mx-auto px-7 max-w-7xl max-sm:px-4">
-        <span className="font-mono text-xs text-cyan tracking-widest">
+        <span className="font-mono text-xs text-accent tracking-widest">
           DOCiBOX.IR
         </span>
         <h2 className="max-w-2xl text-8xl leading-none font-extrabold tracking-tighter my-16 max-sm:text-4xl">

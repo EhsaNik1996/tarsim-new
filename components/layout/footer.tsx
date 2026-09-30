@@ -2,20 +2,71 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ArrowUp } from "lucide-react";
 import { ArrowIcon } from "@/components/shared/arrow";
 import tarsimLogo from "../../public/assets/tarsim-logo.png";
 
-function Ticker() {
+const tickerItems = [
+  "PRODUCT THINKING",
+  "SOFTWARE ENGINEERING",
+  "DIGITAL LIBRARIES",
+  "REAL PROBLEMS",
+  "DOCIBOX.IR",
+];
+
+function TickerPass() {
   return (
-    <>
-      <span>PRODUCT THINKING</span>
-      <span>SOFTWARE ENGINEERING</span>
-      <span>DIGITAL LIBRARIES</span>
-      <span>REAL PROBLEMS</span>
-      <span>DOCIBOX.IR</span>
-    </>
+    <span className="flex shrink-0 items-center">
+      {tickerItems.map((item) => (
+        <span key={item} className="flex shrink-0 items-center gap-8">
+          {item}
+          <i className="size-1 rounded-full bg-accent/70" />
+        </span>
+      ))}
+    </span>
+  );
+}
+
+function Ticker() {
+  const windowRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [passes, setPasses] = useState(2);
+
+  useEffect(() => {
+    const windowEl = windowRef.current;
+    const track = trackRef.current;
+    if (!windowEl || !track) return;
+    const syncPasses = () => {
+      const pass = track.firstElementChild as HTMLElement | null;
+      const passWidth = pass?.offsetWidth ?? 0;
+      if (!passWidth) return;
+      // The loop shifts the track by half of its own width, so it needs at
+      // least two window widths of words to stay covered, and an even number
+      // of passes to land exactly on a pass boundary.
+      const needed = Math.ceil((windowEl.clientWidth * 2) / passWidth);
+      setPasses(Math.max(2, needed % 2 === 0 ? needed : needed + 1));
+    };
+    syncPasses();
+    // The words are measured in pixels, so a late web font swap needs a re-check.
+    document.fonts?.ready.then(syncPasses);
+    window.addEventListener("resize", syncPasses);
+    return () => window.removeEventListener("resize", syncPasses);
+  }, []);
+
+  return (
+    <div ref={windowRef} className="relative overflow-hidden py-5">
+      <div
+        ref={trackRef}
+        className="flex w-max animate-marquee font-mono text-sm text-white/40 whitespace-nowrap"
+        dir="ltr"
+      >
+        {Array.from({ length: passes }, (_, index) => (
+          <TickerPass key={index} />
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -33,15 +84,7 @@ export function SiteFooter() {
           className="object-contain grayscale brightness-200"
         />
       </div>
-      <div className="relative overflow-hidden py-5">
-        <div
-          className="flex w-max animate-marquee font-mono text-sm text-white/40 whitespace-nowrap gap-12"
-          dir="ltr"
-        >
-          <Ticker />
-          <Ticker />
-        </div>
-      </div>
+      <Ticker />
       <div className="relative mx-auto px-7 md:py-24 max-w-7xl max-sm:px-4">
         <div>
           <span

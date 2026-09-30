@@ -8,11 +8,12 @@ body {
 }
 
 @theme {
-  /* Tarsim logo palette: charcoal, white, golden orange, lime green, and sky blue. */
+  /* Tarsim logo palette: charcoal, white, sky blue, golden orange, and lime green.
+     Sky blue is the primary color; golden orange stays as a secondary highlight. */
   --color-ink: #2d2f32;
   --color-paper: #fbfcfd;
-  --color-accent: #f5a800;
-  --color-cyan: #35a9e0;
+  --color-accent: #35a9e0;
+  --color-gold: #f5a800;
   --color-green: #8bc53f;
   --color-muted: #68747b;
   --color-line: #dce7eb;
@@ -174,6 +175,12 @@ body {
   .animate-preview-scroll {
     animation-name: preview-scroll-mobile;
   }
+
+  /* Fewer words fit on a phone, so the ticker needs a shorter cycle to keep the
+     same sense of movement. */
+  .animate-marquee {
+    animation-duration: 7s;
+  }
 }
 .hero-preview-mark {
   transform-origin: center;
@@ -198,12 +205,12 @@ body {
     background:
       radial-gradient(
         circle at 8% 8%,
-        color-mix(in oklab, var(--color-cyan) 12%, transparent),
+        color-mix(in oklab, var(--color-accent) 7%, transparent),
         transparent 26%
       ),
       radial-gradient(
         circle at 92% 24%,
-        color-mix(in oklab, var(--color-accent) 12%, transparent),
+        color-mix(in oklab, var(--color-gold) 6%, transparent),
         transparent 30%
       ),
       var(--color-paper);

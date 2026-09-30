@@ -36,7 +36,7 @@ export function HeroPreview() {
       <div className="relative mx-auto flex aspect-square w-full max-w-72 items-center justify-center">
         <div
           aria-hidden="true"
-          className="absolute inset-10 rounded-full bg-accent/8 blur-3xl"
+          className="absolute inset-10 rounded bg-accent/8 blur-3xl"
         />
         <svg
           aria-hidden="true"
@@ -49,7 +49,7 @@ export function HeroPreview() {
             y="28"
             width="232"
             height="232"
-            rx="64"
+            rx="40"
             className="hero-preview-frame stroke-ink/8"
             strokeDasharray="3 7"
           />
@@ -61,7 +61,7 @@ export function HeroPreview() {
           />
           <path
             d="M260 196V224C260 244 244 260 224 260H196"
-            className="hero-preview-line stroke-cyan"
+            className="hero-preview-line stroke-gold"
             strokeWidth="2"
             strokeLinecap="round"
           />
@@ -82,7 +82,7 @@ export function HeroPreview() {
           <div className="rotate-6 text-center">
             <span
               aria-label={word}
-              className={`inline-block text-4xl leading-[1.35] font-bold tracking-tight ${isComplete ? "bg-[linear-gradient(105deg,var(--color-ink)_0%,var(--color-ink)_30%,var(--color-cyan)_42%,var(--color-green)_50%,var(--color-accent)_58%,var(--color-ink)_70%,var(--color-ink)_100%)] bg-size-[260%_100%] bg-clip-text text-transparent [-webkit-background-clip:text] animate-[hero-title-wave_2.2s_ease-in-out_1_both]" : ""}`}
+              className={`inline-block text-4xl leading-[1.35] font-bold tracking-tight ${isComplete ? "bg-[linear-gradient(105deg,var(--color-ink)_0%,var(--color-ink)_30%,var(--color-gold)_42%,var(--color-green)_50%,var(--color-accent)_58%,var(--color-ink)_70%,var(--color-ink)_100%)] bg-size-[260%_100%] bg-clip-text text-transparent [-webkit-background-clip:text] animate-[hero-title-wave_2.2s_ease-in-out_1_both]" : ""}`}
             >
               {typedWord}
               <span
@@ -96,7 +96,7 @@ export function HeroPreview() {
             >
               <span className="hero-preview-mark h-1 w-5 rounded-full bg-accent" />
               <span className="hero-preview-mark h-1 w-5 rounded-full bg-green [animation-delay:-.25s]" />
-              <span className="hero-preview-mark h-1 w-5 rounded-full bg-cyan [animation-delay:-.5s]" />
+              <span className="hero-preview-mark h-1 w-5 rounded-full bg-gold [animation-delay:-.5s]" />
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@ export function HeroPreview() {
       </p>
       <Link
         href="/contact"
-        className="grسoup mx-auto mt-4 flex w-fit items-center gap-2 rounded-lg px-2 py-2 text-xs text-muted outline-offset-4 transition-colors hover:text-ink focus-visible:outline-2 focus-visible:outline-cyan"
+        className="group mx-auto mt-4 flex w-fit items-center gap-2 rounded-lg px-2 py-2 text-xs text-muted outline-offset-4 transition-colors hover:text-ink focus-visible:outline-2 focus-visible:outline-gold"
       >
         <span>گفت‌وگو با ترسیم</span>
         <ArrowIcon className="size-4 transition-transform group-hover:-translate-x-1" />

@@ -16,8 +16,8 @@ const services = [
     description:
       "اتصال یکپارچهٔ تجهیزات، شعب و تیم‌ها؛ متناسب با فضای کار شما.",
     icon: Network,
-    color: "text-cyan",
-    background: "bg-cyan/8",
+    color: "text-[#1878ad]",
+    background: "bg-accent/8",
   },
   {
     title: "سرور و مجازی‌سازی",
@@ -31,7 +31,7 @@ const services = [
     description: "پیکربندی فایروال و دسترسی امن به سرویس‌های سازمان.",
     icon: ShieldCheck,
     color: "text-[#b57c00]",
-    background: "bg-accent/10",
+    background: "bg-gold/10",
   },
   {
     title: "پشتیبان‌گیری و بازیابی",
@@ -45,14 +45,14 @@ const services = [
     description: "راه‌اندازی سرویس‌ها با Docker و خودکارسازی مسیر انتشار.",
     icon: CloudUpload,
     color: "text-[#b57c00]",
-    background: "bg-accent/10",
+    background: "bg-gold/10",
   },
   {
     title: "مانیتورینگ و نگهداری",
     description: "پایش منابع و سرویس‌ها، شناسایی اختلال و رسیدگی به آن.",
     icon: Activity,
-    color: "text-cyan",
-    background: "bg-cyan/8",
+    color: "text-[#1878ad]",
+    background: "bg-accent/8",
   },
 ];
 
@@ -68,7 +68,7 @@ export function InfrastructureSection() {
           <div>
             <p className="flex items-center gap-2.5 text-xs font-bold text-muted">
               <span
-                className="size-1.5 rounded-full bg-cyan"
+                className="size-1.5 rounded-full bg-accent"
                 aria-hidden="true"
               />
               زیرساخت و شبکه
@@ -88,10 +88,10 @@ export function InfrastructureSection() {
             </p>
             <Link
               href="/contact"
-              className="group mt-7 inline-flex min-h-11 items-center gap-4 rounded-full text-sm font-bold outline-offset-4 transition-colors hover:text-cyan focus-visible:outline-2 focus-visible:outline-cyan"
+              className="group mt-7 inline-flex min-h-11 items-center gap-4 rounded-full text-sm font-bold outline-offset-4 transition-colors hover:text-accent focus-visible:outline-2 focus-visible:outline-accent"
             >
               دربارهٔ زیرساخت شما صحبت کنیم
-              <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-line bg-surface transition-colors group-hover:border-cyan/40 group-hover:bg-cyan/5">
+              <span className="flex size-9 shrink-0 items-center justify-center rounded-full border border-line bg-surface transition-colors group-hover:border-accent/40 group-hover:bg-accent/5">
                 <ArrowUpLeft className="size-4" aria-hidden="true" />
               </span>
             </Link>

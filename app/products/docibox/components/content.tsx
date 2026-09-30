@@ -47,7 +47,7 @@ export function ProductAudiences() {
             <i className="absolute left-2/3 top-2/3 size-44 bg-accent/10 blur-3xl transition duration-500 group-hover:scale-150 rounded-full" />
             <div className="flex relative items-center justify-between">
               <span className="font-sans text-xs text-muted">0{index + 1}</span>
-              <span className="flex items-center justify-center size-12 bg-panel text-accent transition duration-500 group-hover:bg-accent group-hover:text-white group-hover:rotate-6 rounded-2xl">
+              <span className="flex items-center justify-center size-12 bg-panel text-accent transition duration-500 group-hover:bg-accent group-hover:text-ink group-hover:rotate-6 rounded-2xl">
                 <Icon className="size-6 stroke-[1.5]" />
               </span>
             </div>

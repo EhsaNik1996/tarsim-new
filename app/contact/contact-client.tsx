@@ -47,7 +47,7 @@ export default function ContactPage() {
             </p>
             <a
               href="mailto:hello@tarsim.co"
-              className="mt-4 flex w-fit items-center gap-3 rounded-lg py-2 text-lg font-medium outline-offset-4 transition hover:text-cyan focus-visible:outline-2 focus-visible:outline-cyan"
+              className="mt-4 flex w-fit items-center gap-3 rounded-lg py-2 text-lg font-medium outline-offset-4 transition hover:text-accent focus-visible:outline-2 focus-visible:outline-accent"
             >
               <Mail
                 aria-hidden="true"
@@ -107,7 +107,7 @@ export default function ContactPage() {
               <span aria-hidden="true" className="mt-1 flex gap-1">
                 <i className="size-1.5 rounded-full bg-accent" />
                 <i className="size-1.5 rounded-full bg-green" />
-                <i className="size-1.5 rounded-full bg-cyan" />
+                <i className="size-1.5 rounded-full bg-gold" />
               </span>
             </div>
             <div className="grid gap-5 sm:grid-cols-2">

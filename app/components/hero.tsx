@@ -16,7 +16,7 @@ export function HeroSection() {
           <BlurReveal className="text-8xl leading-14 md:leading-30 font-extrabold tracking-tighter mt-7 max-sm:text-5xl">
             <span className="inline-block animate-blur-in">پیچیده‌ها را</span>
             <br />
-            <span className="inline-block relative z-0 animate-blur-in text-accent [animation-delay:180ms] after:absolute after:left-0 after:top-full after:-z-10 after:w-full after:h-0.5 after:animate-line-pulse after:bg-linear-to-l after:from-transparent after:via-accent after:to-cyan">
+            <span className="inline-block relative z-0 animate-blur-in text-accent [animation-delay:180ms] after:absolute after:left-0 after:top-full after:-z-10 after:w-full after:h-0.5 after:animate-line-pulse after:bg-linear-to-l after:from-transparent after:via-accent after:to-gold">
               ساده‌تر
             </span>{" "}
             <span className="inline-block animate-blur-in [animation-delay:320ms]">

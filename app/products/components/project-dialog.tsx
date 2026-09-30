@@ -126,7 +126,7 @@ export function ProjectDialog({
                 dir="ltr"
               >
                 <i className="size-2 rounded-full bg-accent" />
-                <i className="size-2 rounded-full bg-cyan" />
+                <i className="size-2 rounded-full bg-gold" />
                 <i className="size-2 rounded-full bg-green" />
                 <span className="m-auto max-w-[65%] truncate text-[11px] text-muted">
                   {project.url}
