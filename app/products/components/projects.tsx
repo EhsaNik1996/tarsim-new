@@ -12,7 +12,7 @@ import { ChevronLeft, ChevronRight, ArrowUpLeft } from "lucide-react";
 
 const colors = [
   "var(--color-accent)",
-  "var(--color-cyan)",
+  "var(--color-gold)",
   "var(--color-green)",
 ];
 const number = (value: number) => String(value).padStart(2, "0");

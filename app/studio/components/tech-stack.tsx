@@ -301,7 +301,7 @@ export default function TechStackSection() {
   return (
     <section className="mx-auto max-w-7xl px-4 md:px-7" dir="rtl" aria-labelledby="studio-tech-title">
       <div className="relative isolate overflow-hidden rounded-3xl border border-line bg-panel p-6 text-ink md:rounded-4xl md:p-10 lg:p-12">
-        <div aria-hidden="true" className="pointer-events-none absolute -left-24 -top-32 -z-10 size-96 rounded-full bg-cyan/10 blur-3xl" />
+        <div aria-hidden="true" className="pointer-events-none absolute -left-24 -top-32 -z-10 size-96 rounded-full bg-accent/8 blur-3xl" />
         <div aria-hidden="true" className="pointer-events-none absolute -bottom-40 right-0 -z-10 size-96 rounded-full bg-green/10 blur-3xl" />
         <div className="grid items-center gap-9 lg:grid-cols-[0.9fr_1.3fr] lg:gap-12">
           <div>
@@ -312,7 +312,7 @@ export default function TechStackSection() {
             <h2 id="studio-tech-title" className="text-3xl font-extrabold leading-snug tracking-tight md:text-4xl">
               ابزارهای شناخته‌شده.
               <br />
-              <span className="text-cyan">انتخاب‌های عملی.</span>
+              <span className="text-accent">انتخاب‌های عملی.</span>
             </h2>
             <p className="mt-5 max-w-md text-sm leading-8 text-muted">
               اغلب کارفرماها نیازی به دانستن جزئیات فنی ندارند. ما از ابزارهای
@@ -325,10 +325,10 @@ export default function TechStackSection() {
             {techStack.map((tech) => (
               <div
                 key={tech.name}
-                className="group flex min-w-0 flex-col items-start gap-5 rounded-2xl border border-line bg-surface/90 p-4 transition duration-200 hover:-translate-y-1 hover:border-cyan/40 hover:shadow-lg hover:shadow-cyan/5 motion-reduce:transform-none sm:p-5"
+                className="group flex min-w-0 flex-col items-start gap-5 rounded-2xl border border-line bg-surface/90 p-4 transition duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg hover:shadow-accent/5 motion-reduce:transform-none sm:p-5"
                 dir="ltr"
               >
-                <div aria-hidden="true" className="flex size-12 items-center justify-center rounded-xl bg-panel transition-colors group-hover:bg-cyan/10">
+                <div aria-hidden="true" className="flex size-12 items-center justify-center rounded-xl bg-panel transition-colors group-hover:bg-accent/10">
                   {tech.icon}
                 </div>
                 <span className="text-sm font-bold text-ink">{tech.name}</span>
@@ -340,7 +340,7 @@ export default function TechStackSection() {
         <div className="mt-8 flex flex-wrap gap-x-7 gap-y-4 border-t border-line pt-6 md:mt-10">
           {badges.map((badge, index) => (
             <span key={badge} className="inline-flex items-center gap-2.5 text-xs font-bold text-muted">
-              <span aria-hidden="true" className={`size-1.5 rounded-full ${index === 0 ? "bg-accent" : index === 1 ? "bg-cyan" : "bg-green"}`} />
+              <span aria-hidden="true" className={`size-1.5 rounded-full ${index === 0 ? "bg-accent" : index === 1 ? "bg-gold" : "bg-green"}`} />
               {badge}
             </span>
           ))}

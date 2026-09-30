@@ -5,6 +5,7 @@ import { ApproachSection } from "./components/approach";
 import { FeaturedProduct } from "./components/featured";
 import { OtherProducts } from "./products/components/projects";
 import { InfrastructureSection } from "./components/infrastructure";
+import { TrackRecord } from "./components/track-record";
 
 export const metadata: Metadata = {
   title: "استودیوی محصول و فناوری",
@@ -20,6 +21,7 @@ export default function Home() {
       <FeaturedProduct />
       <OtherProducts />
       <InfrastructureSection />
+      <TrackRecord />
       <ApproachSection />
       <ExploreLinks />
     </main>

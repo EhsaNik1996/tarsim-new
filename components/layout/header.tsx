@@ -151,11 +151,11 @@ function MobileLink({
       aria-current={active ? "page" : undefined}
       className={cn(
         "flex items-center justify-between text-lg transition px-5 py-4 rounded-2xl",
-        active ? "bg-accent text-white" : "hover:bg-panel",
+        active ? "bg-accent text-ink" : "hover:bg-panel",
       )}
     >
       <span>{label}</span>
-      {active && <span className="size-2 bg-white rounded-full" />}
+      {active && <span className="size-2 bg-ink rounded-full" />}
     </Link>
   );
 }
