@@ -6,10 +6,30 @@ import { SiteHeader } from "@/components/layout/header";
 import { VisualAtmosphere } from "@/components/effects/atmosphere";
 
 const iranRounded = localFont({
-  src: "../public/assets/fonts/IRAN-Rounded.woff",
+  src: [
+    {
+      path: "../public/assets/fonts/IRAN.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/assets/fonts/IRAN_SemiBold.woff2",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/assets/fonts/IRANBold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/assets/fonts/IRANBlack.woff2",
+      weight: "900",
+      style: "normal",
+    },
+  ],
   variable: "--font-iran-rounded",
   display: "swap",
-  weight: "400",
 });
 
 export const metadata: Metadata = {

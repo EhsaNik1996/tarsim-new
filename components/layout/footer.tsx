@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ArrowUp } from "lucide-react";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import { ArrowIcon } from "@/components/shared/arrow";
 import tarsimLogo from "../../public/assets/tarsim-logo.png";
 
@@ -18,11 +18,10 @@ const tickerItems = [
 
 function TickerPass() {
   return (
-    <span className="flex shrink-0 items-center">
+    <span className="flex shrink-0 items-center gap-8">
       {tickerItems.map((item) => (
-        <span key={item} className="flex shrink-0 items-center gap-8">
+        <span key={item} className="flex shrink-0 items-center">
           {item}
-          <i className="size-1 rounded-full bg-accent/70" />
         </span>
       ))}
     </span>
@@ -75,7 +74,10 @@ export function SiteFooter() {
   return (
     <footer className="relative overflow-hidden bg-ink text-paper">
       <i className="absolute left-1/2 top-20 size-96 bg-accent/10 blur-3xl rounded-full" />
-      <div className="footer-logo-mask pointer-events-none absolute -left-20 top-1/2 size-168 -translate-y-1/2 opacity-[.16] max-lg:-left-40 max-lg:size-136 max-sm:-left-28 max-sm:top-[46%] max-sm:size-96" aria-hidden="true">
+      <div
+        className="footer-logo-mask pointer-events-none absolute -left-20 top-1/2 size-168 -translate-y-1/2 opacity-[.16] max-lg:-left-40 max-lg:size-136 max-sm:-left-28 max-sm:top-[46%] max-sm:size-96"
+        aria-hidden="true"
+      >
         <Image
           src={tarsimLogo}
           alt=""
@@ -99,13 +101,13 @@ export function SiteFooter() {
             <em className="text-accent not-italic">ساختن</em> داری؟
           </p>
           {pathname !== "/contact" && pathname !== "/contact/" && (
-          <Link
-            className="group mt-10 flex w-fit items-center gap-3 border-b border-white/25 py-2 text-sm text-white/80 transition hover:border-accent hover:text-accent max-sm:mb-10 max-sm:mt-7"
-            href="/contact"
-          >
-            <span>با ما حرف بزن</span>
-            <ArrowIcon className="size-4 transition group-hover:-translate-x-1" />
-          </Link>
+            <Link
+              className="group mt-10 flex w-fit items-center gap-3 border-b border-white/25 py-2 text-sm text-white/80 transition hover:border-accent hover:text-accent max-sm:mb-10 max-sm:mt-7"
+              href="/contact"
+            >
+              <span>با ما حرف بزن</span>
+              <ArrowIcon className="size-4 transition group-hover:-translate-x-1" />
+            </Link>
           )}
         </div>
       </div>
