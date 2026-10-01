@@ -1,19 +1,21 @@
 "use client";
 
 import "swiper/css";
+import { projects } from "./projects-data";
+import { A11y, Keyboard } from "swiper/modules";
+import { ProjectDialog } from "./project-dialog";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperInstance } from "swiper";
-import { A11y, Keyboard } from "swiper/modules";
-
-import { projects } from "./projects-data";
-import { ProjectDialog } from "./project-dialog";
 import { useRef, useState, type CSSProperties } from "react";
 import { ChevronLeft, ChevronRight, ArrowUpLeft } from "lucide-react";
 
 const colors = [
-  "var(--color-accent)",
-  "var(--color-gold)",
-  "var(--color-green)",
+  "#159bd2",
+  "#f07812",
+  "#873cff",
+  "#169b73",
+  "#e34f87",
+  "#bd8500",
 ];
 const number = (value: number) => String(value).padStart(2, "0");
 const controlClass =
@@ -128,14 +130,11 @@ export function OtherProducts() {
                   style={
                     {
                       "--project-color": colors[index % colors.length],
-                      borderColor:
-                        active === index
-                          ? colors[index % colors.length]
-                          : "var(--color-line)",
-                      background: `radial-gradient(ellipse at top left, color-mix(in srgb, ${colors[index % colors.length]} 1%, var(--color-surface)), transparent 75%), linear-gradient(210deg, color-mix(in srgb, ${colors[index % colors.length]} 7%, var(--color-surface)), var(--color-surface) 80%)`,
+                      borderColor: `color-mix(in srgb, ${colors[index % colors.length]} ${active === index ? "100%" : "28%"}, var(--color-line))`,
+                      background: `radial-gradient(ellipse at top left, color-mix(in srgb, ${colors[index % colors.length]} 6%, transparent), transparent 75%), linear-gradient(210deg, color-mix(in srgb, ${colors[index % colors.length]} 8%, var(--color-surface)), var(--color-surface) 82%)`,
                       boxShadow:
                         active === index
-                          ? `0 18px 38px -18px color-mix(in srgb, ${colors[index % colors.length]} 58%, transparent)`
+                          ? `0 18px 38px -18px color-mix(in srgb, ${colors[index % colors.length]} 48%, transparent)`
                           : "0 6px 14px rgb(45 47 50 / 5%)",
                       transform:
                         active === index ? "translateY(-4px)" : undefined,
@@ -143,7 +142,14 @@ export function OtherProducts() {
                   }
                 >
                   <div className="flex items-center justify-between gap-4">
-                    <span className="inline-flex max-w-[78%] items-center truncate rounded-full border border-line px-3 py-1.5 text-[11px] leading-none font-bold text-muted">
+                    <span
+                      className="inline-flex max-w-[78%] items-center truncate rounded-full border px-3 py-1.5 text-[11px] leading-none font-bold"
+                      style={{
+                        color: colors[index % colors.length],
+                        borderColor: `color-mix(in srgb, ${colors[index % colors.length]} 30%, white)`,
+                        backgroundColor: `color-mix(in srgb, ${colors[index % colors.length]} 8%, white)`,
+                      }}
+                    >
                       {item.subtitle}
                     </span>
                     <span className="inline-flex shrink-0 items-center rounded-full border border-line px-3 py-1.5 text-[11px] leading-none font-bold text-muted">
@@ -157,7 +163,7 @@ export function OtherProducts() {
                     <span
                       className="block shrink-0 text-[72px] leading-none tracking-[-3px] text-transparent md:hidden rounded-full"
                       style={{
-                        WebkitTextStroke: `1px color-mix(in srgb, ${colors[index % colors.length]} 28%, transparent)`,
+                        WebkitTextStroke: `1px color-mix(in srgb, ${colors[index % colors.length]} 30%, transparent)`,
                       }}
                       aria-hidden="true"
                       dir="ltr"
@@ -177,7 +183,11 @@ export function OtherProducts() {
                         {item.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="border border-line px-3 py-1.5 text-xs text-muted rounded-full"
+                            className="rounded-full border px-3 py-1.5 text-xs text-muted"
+                            style={{
+                              borderColor: `color-mix(in srgb, ${colors[index % colors.length]} 22%, var(--color-line))`,
+                              backgroundColor: `color-mix(in srgb, ${colors[index % colors.length]} 4%, white)`,
+                            }}
                           >
                             {tag}
                           </span>
@@ -192,6 +202,7 @@ export function OtherProducts() {
                           setDialogOpen(true);
                         }}
                         className="flex items-center gap-1 text-xs font-bold outline-offset-4 after:absolute after:inset-0 after:rounded-3xl focus-visible:outline-2 focus-visible:outline-current"
+                        style={{ color: colors[index % colors.length] }}
                       >
                         <span>مشاهده جزئیات</span>
                         <ArrowUpLeft
@@ -203,7 +214,7 @@ export function OtherProducts() {
                     <span
                       className="hidden shrink-0 text-transparent md:block"
                       style={{
-                        WebkitTextStroke: `1px color-mix(in srgb, ${colors[index % colors.length]} 28%, transparent)`,
+                        WebkitTextStroke: `1px color-mix(in srgb, ${colors[index % colors.length]} 30%, transparent)`,
                         fontSize: "clamp(88px, 10vw, 152px)",
                         lineHeight: 0.8,
                         letterSpacing: "-6px",
