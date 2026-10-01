@@ -16,12 +16,12 @@ export function ExploreLinks() {
           <>
             WE THINK
             <br />
-            WE BUILD
+            WE DESIGN
             <br />
-            WE EXECUTE.
+            WE EXECUTE
           </>
         }
-        caption="برای آدم‌هایی که می‌خواهند چیزی واقعی بسازند"
+        caption="برای آدم‌هایی که می‌خواهند تجربه‌هایی واقعی طراحی کنند"
         variant="light"
         ltr
       />
@@ -32,7 +32,7 @@ export function ExploreLinks() {
           <>
             از یک گفت‌وگو
             <br />
-            شروع کنیم.
+            شروع کنیم
           </>
         }
         caption="آشنایی با ترسیم و شروع همکاری"

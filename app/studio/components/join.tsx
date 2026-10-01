@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import labWorkbench from "../../../public/assets/lab-workbench.png";
@@ -23,12 +23,12 @@ export function JoinBand() {
           TARSIM / PEOPLE
         </p>
         <h2 className="max-w-3xl text-8xl leading-11 md:leading-30 font-extrabold tracking-tighter my-16 max-sm:text-4xl">
-          ساختن برایت
+          طراحی کردن برایت
           <br />
           فقط یک شغل نیست.
         </h2>
         <Button asChild variant="outline" size="lg">
-          <Link href="mailto:people@tarsim.co">
+          <Link href="mailto:people@tarsiminc.com">
             گفت‌وگو با ما <Send className="size-4 stroke-[1.7]" />
           </Link>
         </Button>

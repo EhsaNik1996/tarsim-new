@@ -4,7 +4,7 @@ import ContactPageClient from "./contact-client";
 export const metadata: Metadata = {
   title: "تماس با ما",
   description:
-    "برای همکاری، ساخت محصول دیجیتال یا مطرح کردن یک ایده با تیم ترسیم در ارتباط باشید.",
+    "برای همکاری، طراحی محصول دیجیتال یا مطرح کردن یک ایده با تیم ترسیم در ارتباط باشید.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "تماس با ترسیم",

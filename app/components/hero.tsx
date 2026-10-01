@@ -20,11 +20,11 @@ export function HeroSection() {
               ساده‌تر
             </span>{" "}
             <span className="inline-block animate-blur-in [animation-delay:320ms]">
-              می‌سازیم.
+              طراحی می‌کنیم.
             </span>
           </BlurReveal>
           <BlurReveal delay={180} className="max-w-lg text-lg leading-8 mt-10 max-sm:text-sm">
-            محصول و زیرساخت می‌سازیم برای مسئله‌هایی که ارزش حل شدن دارند.
+            محصول و زیرساخت طراحی می‌کنیم برای مسئله‌هایی که ارزش حل شدن دارند.
           </BlurReveal>
         </div>
         <div className="flex w-[38%] shrink-0 justify-end max-lg:w-full max-lg:justify-center">

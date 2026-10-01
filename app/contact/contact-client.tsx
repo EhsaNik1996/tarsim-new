@@ -14,7 +14,7 @@ export default function ContactPage() {
     const body = encodeURIComponent(
       `${data.get("message")}\n\nایمیل: ${data.get("email")}`,
     );
-    window.location.href = `mailto:hello@tarsim.co?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:hello@tarsiminc.com?subject=${subject}&body=${body}`;
   }
 
   return (
@@ -34,11 +34,11 @@ export default function ContactPage() {
             <span className="text-accent text-nowrap">یک گفت‌وگوست.</span>
           </h1>
           <p className="mt-7 max-w-md text-base leading-8 text-muted">
-            ما در ترسیم محصول و زیرساخت می‌سازیم؛ از یک نیاز واقعی تا تجربه‌ای
+            ما در ترسیم محصول و زیرساخت طراحی می‌کنیم؛ از یک نیاز واقعی تا تجربه‌ای
             ساده و کاربردی.
           </p>
           <p className="max-w-md text-base leading-8 text-muted">
-            ایده‌ای برای ساختن داری یا مسئله‌ای که می‌خواهی ساده‌ترش کنی؟ برای
+            ایده‌ای برای طراحی داری یا مسئله‌ای که می‌خواهی ساده‌ترش کنی؟ برای
             ما بنویس؛ از همین‌جا شروع کنیم.
           </p>
           <div className="mt-10 max-w-md border-t border-line pt-6 sm:mt-14">
@@ -46,7 +46,7 @@ export default function ContactPage() {
               اگر راحت‌تری، مستقیم در ارتباط باش.
             </p>
             <a
-              href="mailto:hello@tarsim.co"
+              href="mailto:hello@tarsiminc.com"
               className="mt-4 flex w-fit items-center gap-3 rounded-lg py-2 text-lg font-medium outline-offset-4 transition hover:text-accent focus-visible:outline-2 focus-visible:outline-accent"
             >
               <Mail
@@ -54,7 +54,7 @@ export default function ContactPage() {
                 className="size-5 text-muted"
                 strokeWidth={1.5}
               />
-              <span dir="ltr">hello@tarsim.co</span>
+              <span dir="ltr">hello@tarsiminc.com</span>
             </a>
             <div className="mt-5 flex flex-wrap gap-3">
               {[

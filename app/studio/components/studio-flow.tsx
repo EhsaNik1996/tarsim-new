@@ -10,8 +10,8 @@ const inputs = [
     path: "M118 194 C225 194 240 270 390 292",
   },
   {
-    id: "make",
-    label: "می‌سازیم",
+    id: "design",
+    label: "طراحی می‌کنیم",
     color: "#8bc53f",
     path: "M118 296 C230 296 275 296 390 306",
   },
@@ -41,7 +41,7 @@ export function StudioFlowDiagram() {
         viewBox="0 0 760 560"
         className="absolute inset-x-0 bottom-0 h-full w-full overflow-visible"
         role="img"
-        aria-label="سه مسیر فکر کردن، ساختن و اجرا کردن به یک نرم‌افزار کاربردی می‌رسند"
+        aria-label="سه مسیر فکر کردن، طراحی کردن و اجرا کردن به یک نرم‌افزار کاربردی می‌رسند"
       >
         <defs>
           <filter id="studio-core-shadow" x="-30%" y="-30%" width="160%" height="160%">
@@ -200,7 +200,7 @@ export function StudioFlowDiagram() {
             textAnchor="middle"
             className="fill-white text-base font-black tracking-[2px]"
           >
-            ساخت
+            طراحی
           </text>
           <text
             x="464"

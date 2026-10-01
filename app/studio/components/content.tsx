@@ -1,4 +1,4 @@
-import { CircleHelp, Hammer, Rocket } from "lucide-react";
+import { CircleHelp, PencilRuler, Rocket } from "lucide-react";
 import { BlurReveal } from "@/components/effects/reveal";
 
 export function LabLoop() {
@@ -67,13 +67,13 @@ export function LabRoles() {
 }
 const steps = [
   { label: "THINK", text: "مسئلهٔ درست را پیدا می‌کنیم.", icon: CircleHelp },
-  { label: "MAKE", text: "سریع و دقیق نمونه می‌سازیم.", icon: Hammer },
+  { label: "DESIGN", text: "سریع و دقیق نمونه‌های اولیه طراحی می‌کنیم.", icon: PencilRuler },
   { label: "EXECUTE", text: "به دست آدم‌های واقعی می‌رسانیم.", icon: Rocket },
 ];
 const roles = [
   { label: "ENGINEERING", text: "Frontend · Backend · Infrastructure" },
   { label: "PRODUCT", text: "Product thinking · UX · Research" },
-  { label: "IDEAS", text: "اگر چیزی برای ساختن داری، با ما مطرحش کن." },
+  { label: "IDEAS", text: "اگر ایده‌ای برای طراحی داری، با ما مطرحش کن." },
 ];
 
 

@@ -8,7 +8,7 @@ import TechStackSection from "./components/tech-stack";
 
 export const metadata: Metadata = {
   title: "استودیو ترسیم",
-  description: "استودیو ترسیم جایی برای فکر کردن، ساختن و اجرای محصولات دیجیتال کاربردی است.",
+  description: "استودیو ترسیم جایی برای فکر کردن، طراحی و اجرای محصولات دیجیتال کاربردی است.",
   alternates: { canonical: "/studio" },
 };
 
@@ -26,7 +26,7 @@ export default function LabPage() {
         accent={
           <>
             <span className="inline-block bg-[linear-gradient(105deg,var(--color-green)_0%,var(--color-green)_35%,color-mix(in_srgb,var(--color-green)_35%,white)_50%,var(--color-green)_65%,var(--color-green)_100%)] bg-size-[260%_100%] bg-position-[0_0] bg-clip-text text-transparent [-webkit-background-clip:text] animate-[studio-word-wave_8s_ease-in-out_infinite] [animation-delay:800ms]">
-              می‌سازیم.
+              طراحی می‌کنیم.
             </span>
             <br />
             <span className="inline-block bg-[linear-gradient(105deg,var(--color-gold)_0%,var(--color-gold)_35%,color-mix(in_srgb,var(--color-gold)_35%,white)_50%,var(--color-gold)_65%,var(--color-gold)_100%)] bg-size-[260%_100%] bg-position-[0_0] bg-clip-text text-transparent [-webkit-background-clip:text] animate-[studio-word-wave_8s_ease-in-out_infinite] [animation-delay:1600ms]">
@@ -34,7 +34,7 @@ export default function LabPage() {
             </span>
           </>
         }
-        text="استودیو ترسیم جایی برای آدم‌هایی است که فقط دنبال تمام کردن تسک نیستند؛ می‌خواهند چیزی بسازند که واقعاً استفاده شود."
+        text="استودیو ترسیم جایی برای آدم‌هایی است که فقط دنبال تمام کردن تسک نیستند؛ می‌خواهند محصولی طراحی کنند که واقعاً استفاده شود."
         sideVisual={<StudioFlowDiagram />}
       />
       <LabLoop />
