@@ -4,10 +4,9 @@ import { NextPage } from "@/components/shared/next";
 import { PageIntro } from "@/components/shared/intro";
 import { LabLoop, LabRoles } from "./components/content";
 import { StudioFlowDiagram } from "./components/studio-flow";
-import TechStackSection from "./components/tech-stack";
 
 export const metadata: Metadata = {
-  title: "استودیو ترسیم",
+  title: "استودیو",
   description: "استودیو ترسیم جایی برای فکر کردن، طراحی و اجرای محصولات دیجیتال کاربردی است.",
   alternates: { canonical: "/studio" },
 };
@@ -38,9 +37,6 @@ export default function LabPage() {
         sideVisual={<StudioFlowDiagram />}
       />
       <LabLoop />
-      <div className="mt-20 md:mt-32">
-        <TechStackSection />
-      </div>
       <LabRoles />
       <JoinBand />
       <NextPage
@@ -51,5 +47,4 @@ export default function LabPage() {
     </main>
   );
 }
-
 

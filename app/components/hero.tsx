@@ -23,7 +23,10 @@ export function HeroSection() {
               طراحی می‌کنیم.
             </span>
           </BlurReveal>
-          <BlurReveal delay={180} className="max-w-lg text-lg leading-8 mt-10 max-sm:text-sm">
+          <BlurReveal
+            delay={180}
+            className="max-w-lg text-lg leading-8 mt-10 max-sm:text-sm"
+          >
             محصول و زیرساخت طراحی می‌کنیم برای مسئله‌هایی که ارزش حل شدن دارند.
           </BlurReveal>
         </div>
@@ -31,18 +34,14 @@ export function HeroSection() {
           <HeroPreview />
         </div>
       </div>
-      <div className="hidden md:flex items-center justify-between border-t border-line pt-5">
-        <span className="font-mono text-xs text-muted" dir="ltr">
-          SCROLL TO EXPLORE
-        </span>
+
         <Link
-          className="flex items-center justify-center size-14 bg-ink text-paper transition hover:translate-y-1 hover:bg-accent hover:text-ink rounded-full"
+          className="hidden md:flex items-center justify-center place-self-end size-14 bg-ink text-paper transition hover:translate-y-1 hover:bg-accent hover:text-ink rounded-full"
           href="#product"
           aria-label="دیدن محصول"
         >
           <ArrowIcon direction="down" />
         </Link>
-      </div>
     </section>
   );
 }
