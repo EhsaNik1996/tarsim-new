@@ -102,43 +102,6 @@ body {
       transform: scaleX(1);
     }
   }
-  @keyframes hero-mark {
-    0%,
-    100% {
-      opacity: 0.45;
-      transform: scaleX(0.7);
-    }
-    50% {
-      opacity: 1;
-      transform: scaleX(1.2);
-    }
-  }
-  @keyframes hero-dot {
-    0%,
-    100% {
-      opacity: 0.55;
-      transform: scale(0.8);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1.35);
-    }
-  }
-  @keyframes hero-frame {
-    to {
-      stroke-dashoffset: -40;
-    }
-  }
-  @keyframes hero-line {
-    0%,
-    100% {
-      opacity: 0.7;
-    }
-    50% {
-      opacity: 1;
-      filter: drop-shadow(0 0 3px currentColor);
-    }
-  }
   @keyframes preview-scroll {
     0%,
     10% {
@@ -181,21 +144,6 @@ body {
   .animate-marquee {
     animation-duration: 7s;
   }
-}
-.hero-preview-mark {
-  transform-origin: center;
-  animation: hero-mark 1.8s ease-in-out infinite;
-}
-.hero-preview-dot {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: hero-dot 2.4s ease-in-out infinite;
-}
-.hero-preview-frame {
-  animation: hero-frame 10s linear infinite;
-}
-.hero-preview-line {
-  animation: hero-line 2.8s ease-in-out infinite;
 }
 @layer base {
   html {
@@ -305,5 +253,4 @@ body {
   32% { background-position: -160% 0; }
   52%, 100% { background-position: 0 0; }
 }
-
 

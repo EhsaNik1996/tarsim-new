@@ -50,7 +50,7 @@ export function SiteHeader() {
             className="group flex min-h-10 items-center gap-2.5 border border-line bg-white/55 px-4 text-sm font-medium text-ink transition duration-300 hover:border-accent hover:bg-white rounded-full"
           >
             <i className="size-2 animate-pulse bg-accent transition duration-300 group-hover:scale-125 rounded-full" />
-            <span>تماس با ما</span>
+            <span>ایده‌تو باهم بسازیم؟</span>
             <ArrowUpLeft
               aria-hidden="true"
               className="size-4 stroke-[1.7] text-muted transition duration-300 group-hover:-translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
@@ -97,7 +97,7 @@ export function SiteHeader() {
           >
             <span className="flex items-center gap-3">
               <i className="size-2 rounded-full bg-accent" />
-              تماس با ما
+              ایده‌تو باهم بسازیم؟
             </span>
             <ArrowUpLeft aria-hidden="true" className="size-5 stroke-[1.7] text-accent" />
           </Link>
