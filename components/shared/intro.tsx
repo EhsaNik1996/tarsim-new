@@ -67,7 +67,7 @@ export function PageIntro({
       </BlurReveal>
       <div className="w-2/3 max-sm:w-full">
         <BlurReveal>
-          <h1 className="text-8xl leading-17 md:leading-33 font-extrabold tracking-tighter mt-16 max-sm:text-5xl max-sm:mt-20">
+          <h1 className="text-8xl leading-17 md:leading-33 font-extrabold tracking-tighter pt-10 max-sm:text-5xl">
             {title}
             <br />
             <em
