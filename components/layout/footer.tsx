@@ -95,7 +95,7 @@ export function SiteFooter() {
           >
             START A CONVERSATION / 2026
           </span>
-          <p className="text-8xl leading-11 md:leading-30 font-extrabold tracking-tighter mt-8 max-sm:text-4xl">
+          <p className="text-8xl leading-11 md:leading-30 font-extrabold tracking-tighter my-8 max-sm:text-4xl">
             چیزی برای
             <br />
             <em className="text-accent not-italic">ساختن</em> داری؟
