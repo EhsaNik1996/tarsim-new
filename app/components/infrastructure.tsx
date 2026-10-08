@@ -119,9 +119,9 @@ export function InfrastructureSection() {
           </div>
           <p className="text-xs leading-6 text-muted">ارزیابی نیاز → طراحی راهکار → اجرا و نگهداری</p>
         </div>
-        <div className="grid min-w-0 items-start gap-4 md:grid-cols-2 md:gap-6">
+        <div className="grid min-w-0 items-start overflow-hidden rounded-3xl border border-line bg-surface shadow-sm md:grid-cols-2 md:gap-6 md:overflow-visible md:rounded-none md:border-0 md:bg-transparent md:shadow-none">
           {[services.slice(0, 3), services.slice(3)].map((column, columnIndex) => (
-            <ul key={columnIndex} className="min-w-0 overflow-hidden rounded-3xl border border-line bg-surface shadow-sm">
+            <ul key={columnIndex} className="min-w-0 overflow-hidden border-b border-line bg-surface last:border-b-0 md:rounded-3xl md:border md:shadow-sm md:last:border-b">
           {column.map(({ title, problem, description, icon: Icon, color, background }, rowIndex) => {
             const index = columnIndex * 3 + rowIndex;
             const expanded = open === index;
