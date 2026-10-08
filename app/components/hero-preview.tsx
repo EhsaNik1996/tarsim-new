@@ -90,14 +90,14 @@ export function HeroPreview() {
     : { type: "spring" as const, stiffness: 250, damping: 22 };
 
   return (
-    <div className="relative w-full max-w-sm py-6 sm:py-10">
+    <div className="relative min-w-0 w-full max-w-sm py-6 sm:py-10">
       <div
         dir="rtl"
         className="relative mx-auto w-full max-w-92 px-3 pb-3 pt-4"
       >
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-1/3 size-72 -translate-x-1/2 rounded-full bg-accent/10 blur-3xl"
+          className="pointer-events-none absolute left-1/2 top-1/3 aspect-square w-full max-w-72 -translate-x-1/2 rounded-full bg-accent/10 blur-3xl"
         />
         <div
           aria-hidden="true"
@@ -122,14 +122,14 @@ export function HeroPreview() {
           </p>
         </div>
 
-        <div className="relative mx-auto mt-3 flex h-76 items-center justify-center">
+        <div className="relative mx-auto mt-3 flex aspect-square w-full max-w-76 items-center justify-center">
           <div
             aria-hidden="true"
-            className="absolute size-74 rounded-full border border-dashed border-accent/20 animate-[spin_42s_linear_infinite]"
+            className="absolute aspect-square w-[97%] rounded-full border border-dashed border-accent/20 animate-[spin_42s_linear_infinite]"
           />
           <div
             aria-hidden="true"
-            className="absolute size-74 rounded-full border border-white/80"
+            className="absolute aspect-square w-[97%] rounded-full border border-white/80"
           />
 
           <span className="absolute right-[3%] top-[24%] rounded-full border border-white/80 bg-white/65 px-2.5 py-1 text-[9px] font-semibold text-muted shadow-sm">
@@ -159,11 +159,11 @@ export function HeroPreview() {
             aria-atomic="true"
             initial={false}
             animate={{
-              width: activeView === "tarsim" ? 224 : 282,
-              height: activeView === "tarsim" ? 224 : 282,
+              width: activeView === "tarsim" ? "74%" : "93%",
+              height: activeView === "tarsim" ? "74%" : "93%",
             }}
             transition={transition}
-            className="absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/90 bg-[linear-gradient(145deg,#ffffff_8%,#d9eaf0_28%,#f9fdff_50%,#c8e0e8_74%,#ffffff_95%)] p-1.75 shadow-[0_24px_55px_-16px_rgba(45,47,50,0.38),inset_0_2px_4px_rgba(255,255,255,0.95)] ring-1 ring-ink/10"
+            className="absolute left-1/2 top-1/2 z-10 flex aspect-square -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/90 bg-[linear-gradient(145deg,#ffffff_8%,#d9eaf0_28%,#f9fdff_50%,#c8e0e8_74%,#ffffff_95%)] p-1.75 shadow-[0_24px_55px_-16px_rgba(45,47,50,0.38),inset_0_2px_4px_rgba(255,255,255,0.95)] ring-1 ring-ink/10"
           >
             <div className="relative flex size-full items-center justify-center overflow-hidden rounded-full border border-white/90 bg-[radial-gradient(ellipse_at_48%_35%,rgba(255,255,255,0.98)_0%,rgba(246,252,255,0.96)_48%,rgba(218,239,246,0.94)_100%)] px-5 text-center shadow-[inset_0_0_24px_rgba(53,169,224,0.12)]">
               <div

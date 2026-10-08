@@ -1,65 +1,56 @@
 import Link from "next/link";
-import { CircleAlert } from "lucide-react";
+import Image from "next/image";
+import { DociboxAccordion } from "./docibox-accordion";
 import { ArrowIcon } from "@/components/shared/arrow";
 import { BlurReveal } from "@/components/effects/reveal";
 import { DociBoxStage } from "@/components/shared/stage";
+import dociboxLogo from "../../public/assets/docibox-logo.png";
 
 export function FeaturedProduct() {
   return (
     <section
       id="product"
-      className="mx-auto px-7 max-w-7xl max-sm:px-4 md:py-24"
+      aria-labelledby="docibox-featured-title"
+      className="mx-auto max-w-7xl px-4 py-12 sm:px-7 md:py-24"
     >
       <BlurReveal>
-        <div className="text-xs font-bold tracking-wide">
+        <div className="flex items-center text-xs font-bold tracking-wide after:mr-5 after:h-px after:flex-1 after:bg-line">
           <span className="text-accent ml-4">01</span>محصول اصلی
         </div>
-        <div className="flex items-end justify-between mt-16 max-sm:block max-sm:mt-12">
-          <div>
-            <p className="font-sans text-sm font-bold text-accent tracking-widest">
-              DOCiBOX®
-            </p>
-            <div className="mt-6 flex max-w-xl items-start gap-3 rounded-2xl border border-gold/20 bg-gold/5 p-4 md:p-5">
-              <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-gold/10 text-[#9a6b00]">
-                <CircleAlert className="size-4.5" aria-hidden="true" />
+        <div className="mt-9 grid min-w-0 items-center gap-9 md:mt-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
+          <div className="min-w-0">
+            <div className="flex items-center gap-3">
+              <span className="flex size-12 shrink-0 items-center justify-center rounded-2xl border border-line bg-surface shadow-sm">
+                <Image src={dociboxLogo} alt="" width={32} height={32} />
               </span>
               <div>
-                <span className="text-xs font-extrabold text-[#9a6b00]">
-                  مسئله‌ای که حل می‌کنیم
-                </span>
-                <p className="mt-1 text-sm leading-7 text-ink/75">
-                  منابع کتابخانه‌ها و ناشران پراکنده‌اند و پیدا کردن و دسترسی به
-                  محتوای موردنیاز دشوار است.
-                </p>
+                <p dir="ltr" className="w-fit font-sans text-sm font-extrabold tracking-widest text-accent">DOCiBOX</p>
+                <p className="mt-1 text-[11px] text-muted">جایی برای به‌هم‌رسیدن دانش</p>
               </div>
             </div>
-            <h2 className="text-8xl leading-tight font-extrabold tracking-tighter mt-5 max-sm:text-4xl">
+            <h2 id="docibox-featured-title" className="mt-6 text-[clamp(2rem,8vw,3rem)] font-extrabold leading-[1.4] tracking-tight sm:text-5xl xl:text-6xl">
               یک کتابخانه،
               <br />
-              هزار مسیر کشف.
+              <span className="text-accent">هزار مسیر کشف.</span>
             </h2>
-          </div>
-          <div className="max-w-sm rounded-2xl border border-accent/15 bg-panel/45 p-5 leading-8 max-sm:mt-8">
-            <span className="text-xs font-extrabold text-accent">
-              راهکار داکیباکس
-            </span>
-            <p className="mt-2 text-sm text-muted">
-              کتابخانه‌ها، ناشران و منابع دیجیتال را در یک تجربهٔ یکپارچه گرد
-              هم می‌آورد تا دانش آسان‌تر پیدا و در دسترس قرار بگیرد.
+            <p className="mt-5 max-w-md text-sm leading-8 text-muted">
+              کتابخانه‌ها، ناشران و منابع دیجیتال در یک فضای مشترک؛
+              تا به‌جای جست‌وجو میان مجموعه‌های پراکنده، مسیر رسیدن به دانش را پیدا کنید.
             </p>
+            <Link href="/products/docibox" className="group mt-6 inline-flex min-h-12 max-w-full items-center gap-4 rounded-full bg-ink py-2 pl-2 pr-5 text-sm font-bold text-paper outline-offset-4 transition-colors hover:bg-accent focus-visible:outline-2 focus-visible:outline-accent">
+              کشف داکیباکس
+              <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-white/10">
+                <ArrowIcon className="size-4 transition-transform group-hover:-translate-x-0.5" />
+              </span>
+            </Link>
           </div>
+          <DociboxAccordion />
         </div>
       </BlurReveal>
-      <BlurReveal className="mt-14 max-sm:mt-9" delay={120}>
-        <DociBoxStage />
-      </BlurReveal>
-      <BlurReveal delay={180}>
-        <Link
-          className="flex items-center w-fit font-bold text-accent border-b border-accent gap-3 mt-9 py-4"
-          href="/products/docibox"
-        >
-          کشف داکیباکس <ArrowIcon />
-        </Link>
+      <BlurReveal className="mt-9 md:mt-12" delay={120}>
+        <div className="overflow-hidden rounded-3xl sm:rounded-4xl">
+          <DociBoxStage />
+        </div>
       </BlurReveal>
     </section>
   );

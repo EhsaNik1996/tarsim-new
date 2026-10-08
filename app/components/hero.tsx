@@ -9,11 +9,11 @@ export function HeroSection() {
       className="flex flex-col relative min-h-[calc(100vh-6rem)] mx-auto px-7 pt-12 pb-9 max-w-7xl max-sm:min-h-[calc(100svh-5rem)] max-sm:px-4 max-sm:pt-10"
       id="top"
     >
-      <div className="flex items-center flex-1 gap-10 pb-10 max-lg:flex-col max-lg:items-start max-lg:justify-center">
-        <div className="flex-1">
+      <div className="flex min-w-0 w-full items-center flex-1 gap-10 pb-10 max-lg:flex-col max-lg:items-start max-lg:justify-center">
+        <div className="min-w-0 flex-1 max-lg:w-full">
           <span className="hidden md:block">استودیوی محصول ترسیم</span>
 
-          <BlurReveal className="text-8xl leading-14 md:leading-30 font-extrabold tracking-tighter mt-7 max-sm:text-5xl">
+          <BlurReveal className="text-8xl leading-14 md:leading-30 font-extrabold tracking-tighter mt-7 max-sm:text-[clamp(2rem,10vw,3rem)]">
             <span className="inline-block animate-blur-in">پیچیده‌ها را</span>
             <br />
             <span className="inline-block relative z-0 animate-blur-in text-accent [animation-delay:180ms] after:absolute after:left-0 after:top-full after:-z-10 after:w-full after:h-0.5 after:animate-line-pulse after:bg-linear-to-l after:from-transparent after:via-accent after:to-gold">
@@ -30,7 +30,7 @@ export function HeroSection() {
             محصول و زیرساخت طراحی می‌کنیم برای مسئله‌هایی که ارزش حل شدن دارند.
           </BlurReveal>
         </div>
-        <div className="flex w-[38%] shrink-0 justify-end max-lg:w-full max-lg:justify-center">
+        <div className="flex min-w-0 w-[38%] shrink-0 justify-end max-lg:w-full max-lg:justify-center">
           <HeroPreview />
         </div>
       </div>
