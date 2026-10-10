@@ -125,7 +125,7 @@ export function InfrastructureSection() {
             </h3>
           </div>
           <p className="text-xs leading-6 text-muted">
-            ارزیابی نیاز → طراحی راهکار → اجرا و نگهداری
+            اجرا و نگهداری → طراحی راهکار → ارزیابی نیاز 
           </p>
         </div>
         <ul className="grid min-w-0 gap-4 sm:grid-cols-2 lg:grid-cols-3">
