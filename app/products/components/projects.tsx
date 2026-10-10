@@ -141,21 +141,17 @@ export function OtherProducts() {
                     } as CSSProperties
                   }
                 >
-                  <div className="flex items-center justify-between gap-4">
-                    <span
-                      className="inline-flex max-w-[78%] items-center truncate rounded-full border px-3 py-1.5 text-[11px] leading-none font-bold"
-                      style={{
-                        color: colors[index % colors.length],
-                        borderColor: `color-mix(in srgb, ${colors[index % colors.length]} 30%, white)`,
-                        backgroundColor: `color-mix(in srgb, ${colors[index % colors.length]} 8%, white)`,
-                      }}
-                    >
-                      {item.subtitle}
-                    </span>
-                    <span className="inline-flex shrink-0 items-center rounded-full border border-line px-3 py-1.5 text-[11px] leading-none font-bold text-muted">
-                      {item.privacy}
-                    </span>
-                  </div>
+                  <span
+                    className="inline-flex w-fit items-center truncate rounded-full border px-3 py-1.5 text-[11px] leading-none font-bold"
+                    style={{
+                      color: colors[index % colors.length],
+                      borderColor: `color-mix(in srgb, ${colors[index % colors.length]} 30%, white)`,
+                      backgroundColor: `color-mix(in srgb, ${colors[index % colors.length]} 8%, white)`,
+                    }}
+                  >
+                    {item.subtitle}
+                  </span>
+
                   <div className="mt-9 flex items-center justify-between gap-3">
                     <h3 className="min-w-0 text-2xl font-black leading-relaxed text-ink">
                       {item.title}
@@ -178,39 +174,23 @@ export function OtherProducts() {
                     className="mt-auto flex items-end justify-between gap-3"
                     dir="ltr"
                   >
-                    <div className="min-w-0 flex-1">
-                      <div className="mb-4 flex flex-wrap gap-1">
-                        {item.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="rounded-full border px-3 py-1.5 text-xs text-muted"
-                            style={{
-                              borderColor: `color-mix(in srgb, ${colors[index % colors.length]} 22%, var(--color-line))`,
-                              backgroundColor: `color-mix(in srgb, ${colors[index % colors.length]} 4%, white)`,
-                            }}
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                      <button
-                        type="button"
-                        aria-haspopup="dialog"
-                        aria-label={`دربارهٔ ${item.title}`}
-                        onClick={() => {
-                          setSelected(index);
-                          setDialogOpen(true);
-                        }}
-                        className="flex items-center gap-1 text-xs font-bold outline-offset-4 after:absolute after:inset-0 after:rounded-3xl focus-visible:outline-2 focus-visible:outline-current"
-                        style={{ color: colors[index % colors.length] }}
-                      >
-                        <span>مشاهده جزئیات</span>
-                        <ArrowUpLeft
-                          aria-hidden="true"
-                          className="size-3 -rotate-90"
-                        />
-                      </button>
-                    </div>
+                    <button
+                      type="button"
+                      aria-haspopup="dialog"
+                      aria-label={`دربارهٔ ${item.title}`}
+                      onClick={() => {
+                        setSelected(index);
+                        setDialogOpen(true);
+                      }}
+                      className="flex items-center gap-1 text-xs font-bold outline-offset-4 after:absolute after:inset-0 after:rounded-3xl focus-visible:outline-2 focus-visible:outline-current"
+                      style={{ color: colors[index % colors.length] }}
+                    >
+                      <span>مشاهده جزئیات</span>
+                      <ArrowUpLeft
+                        aria-hidden="true"
+                        className="size-3 -rotate-90"
+                      />
+                    </button>
                     <span
                       className="hidden shrink-0 text-transparent md:block"
                       style={{
