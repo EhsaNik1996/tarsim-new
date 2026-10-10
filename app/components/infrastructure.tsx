@@ -1,15 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useId, useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
 import { BlurReveal } from "@/components/effects/reveal";
 import {
   Activity,
   ArrowDown,
   ArrowUpLeft,
   Check,
-  ChevronDown,
   CloudUpload,
   DatabaseBackup,
   Network,
@@ -75,10 +72,6 @@ const services = [
 ];
 
 export function InfrastructureSection() {
-  const [open, setOpen] = useState<number | null>(null);
-  const instanceId = useId();
-  const reducedMotion = useReducedMotion();
-
   return (
     <section
       id="infrastructure"
@@ -135,105 +128,41 @@ export function InfrastructureSection() {
             ارزیابی نیاز → طراحی راهکار → اجرا و نگهداری
           </p>
         </div>
-        <div className="grid min-w-0 items-start overflow-hidden rounded-3xl border border-line bg-surface shadow-sm md:grid-cols-2 md:gap-6 md:overflow-visible md:rounded-none md:border-0 md:bg-transparent md:shadow-none">
-          {[services.slice(0, 3), services.slice(3)].map(
-            (column, columnIndex) => (
-              <ul
-                key={columnIndex}
-                className="min-w-0 overflow-hidden border-b border-line bg-surface last:border-b-0 md:rounded-3xl md:border md:shadow-sm md:last:border-b"
+        <ul className="grid min-w-0 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map(
+            ({ title, problem, description, icon: Icon, color, background }) => (
+              <li
+                key={title}
+                className="group min-w-0 rounded-3xl border border-line bg-surface p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lg hover:shadow-ink/5 sm:p-6"
               >
-                {column.map(
-                  (
-                    {
-                      title,
-                      problem,
-                      description,
-                      icon: Icon,
-                      color,
-                      background,
-                    },
-                    rowIndex,
-                  ) => {
-                    const index = columnIndex * 3 + rowIndex;
-                    const expanded = open === index;
-                    const triggerId = `${instanceId}-${index}-trigger`;
-                    const panelId = `${instanceId}-${index}-panel`;
-
-                    return (
-                      <li
-                        key={title}
-                        className={`min-w-0 overflow-hidden border-b border-line last:border-b-0 transition-colors duration-300 ${expanded ? "bg-accent/5" : "bg-surface hover:bg-panel/40"}`}
-                      >
-                        <h4>
-                          <button
-                            type="button"
-                            id={triggerId}
-                            aria-expanded={expanded}
-                            aria-controls={panelId}
-                            onClick={() => setOpen(expanded ? null : index)}
-                            className="flex min-h-24 w-full items-center gap-3 p-5 text-right focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-accent sm:px-6"
-                          >
-                            <span
-                              className={`flex size-10 shrink-0 items-center justify-center rounded-xl ${color} ${background}`}
-                            >
-                              <Icon
-                                className="size-5"
-                                strokeWidth={1.5}
-                                aria-hidden="true"
-                              />
-                            </span>
-                            <span className="min-w-0 flex-1">
-                              <span className="block text-[10px] font-bold text-muted">
-                                {title}
-                              </span>
-                              <span className="mt-1 block text-sm font-extrabold leading-7">
-                                {problem}
-                              </span>
-                            </span>
-                            <ChevronDown
-                              className={`size-4 shrink-0 text-muted transition-transform duration-300 motion-reduce:transition-none ${expanded ? "rotate-180" : ""}`}
-                              aria-hidden="true"
-                            />
-                          </button>
-                        </h4>
-                        <motion.div
-                          id={panelId}
-                          role="region"
-                          aria-labelledby={triggerId}
-                          aria-hidden={!expanded}
-                          inert={!expanded}
-                          initial={false}
-                          animate={{
-                            height: expanded ? "auto" : 0,
-                            opacity: expanded ? 1 : 0,
-                          }}
-                          transition={{
-                            duration: reducedMotion ? 0 : 0.32,
-                            ease: [0.22, 1, 0.36, 1],
-                          }}
-                          className="overflow-hidden"
-                        >
-                          <div className="border-t border-line/70 bg-linear-to-b from-surface to-panel/60 px-5 py-5 sm:px-6">
-                            <span className="flex items-center gap-2 text-[10px] font-bold text-accent">
-                              <ArrowDown
-                                className="size-3.5"
-                                aria-hidden="true"
-                              />
-                              راهکار ترسیم
-                            </span>
-                            <p className="mt-2 text-xs leading-7 text-muted">
-                              {description}
-                            </p>
-                          </div>
-                        </motion.div>
-                      </li>
-                    );
-                  },
-                )}
-              </ul>
+                <div className="flex items-center gap-3">
+                  <span
+                    className={`flex size-11 shrink-0 items-center justify-center rounded-2xl ${color} ${background}`}
+                  >
+                    <Icon
+                      className="size-5"
+                      strokeWidth={1.5}
+                      aria-hidden="true"
+                    />
+                  </span>
+                  <span className="text-xs font-bold text-muted">{title}</span>
+                </div>
+                <h4 className="mt-5 text-sm font-extrabold leading-7 text-ink">
+                  {problem}
+                </h4>
+                <div className="mt-5 border-t border-line/70 pt-4">
+                  <span className="flex items-center gap-2 text-[10px] font-bold text-accent">
+                    <ArrowDown className="size-3.5" aria-hidden="true" />
+                    راهکار ترسیم
+                  </span>
+                  <p className="mt-2 text-xs leading-7 text-muted">
+                    {description}
+                  </p>
+                </div>
+              </li>
             ),
           )}
-        </div>
+        </ul>
         <ul
           aria-label="رویکرد ما در اجرای زیرساخت"
           className="mt-6 flex flex-wrap justify-center gap-x-7 gap-y-3 text-xs text-muted"
